@@ -1,0 +1,10 @@
+{
+  "n_t": 21307,
+  "n_c": 21306,
+  "events_t": 267,
+  "events_c": 122,
+  "estimate": 0.006805006519615695,
+  "ci_low": 0.005014344671481532,
+  "ci_high": 0.008640723396917826,
+  "method": "Newcombe; historical outcome-informed comparison, not prospective registration"
+}

@@ -1,0 +1,106 @@
+{
+  "version": "criteo-v2.1-1",
+  "frozen_at": "2026-10-15T00:04:32.681Z",
+  "authorization": "User approved adding public randomized experimental data; purchase versus same-budget random remains priority",
+  "source_sha256": "2716e1bf0fd157a93b5bf86924d9088419dfbac2022c6cd90030220634f616dc",
+  "unit": "published row, anonymized user; unavailable advertiser/cookie identities prevent cluster validation",
+  "split": {
+    "method": "seeded pseudorandom independent uniform per original row, no label stratification",
+    "seed": 20261021,
+    "train": 0.35,
+    "validation": 0.15,
+    "test": 0.5
+  },
+  "features": {
+    "continuous": [
+      "f0",
+      "f2",
+      "f7",
+      "f10"
+    ],
+    "categorical": [
+      "f1",
+      "f3",
+      "f4",
+      "f5",
+      "f6",
+      "f8",
+      "f9",
+      "f11"
+    ],
+    "encoding": "train-only top200 categories plus OTHER, native HGB categorical features; numeric float32 after category codes",
+    "forbidden": [
+      "exposure",
+      "visit",
+      "conversion",
+      "treatment as customer targeting feature"
+    ],
+    "missing": "fail preparation if any source value missing"
+  },
+  "outcome": "conversion, published 14-day binary purchasing outcome; no filtering on exposure/visit",
+  "propensity": 0.85,
+  "propensity_source": "v2 paper global rebalancing; benchmark assumption, actual original blocked randomization/sampling mechanism unavailable",
+  "candidates": [
+    {
+      "name": "t_hgb7",
+      "kind": "t",
+      "leaves": 7
+    },
+    {
+      "name": "t_hgb31",
+      "kind": "t",
+      "leaves": 31
+    },
+    {
+      "name": "s_hgb7",
+      "kind": "s",
+      "leaves": 7
+    },
+    {
+      "name": "s_hgb31",
+      "kind": "s",
+      "leaves": 31
+    },
+    {
+      "name": "x_hgb7",
+      "kind": "x",
+      "leaves": 7
+    },
+    {
+      "name": "x_hgb31",
+      "kind": "x",
+      "leaves": 31
+    }
+  ],
+  "common": {
+    "max_iter": 120,
+    "learning_rate": 0.05,
+    "min_samples_leaf": 1000,
+    "l2_regularization": 30,
+    "max_depth": null,
+    "early_stopping": false,
+    "class_weight": null,
+    "seed": 20261021,
+    "n_jobs": 2
+  },
+  "nuisance": "T-HGB31 fit TRAIN only, shared evaluation m0,m1 for all candidates; no training labels in validation/test",
+  "selection": "highest validation AIPW covariance gain at fixed nominal10% among six candidates; tie by candidate name. Freeze selection before reading test outcomes. No refitting on validation",
+  "policy": "Freeze score cutpoint and independent row-hash tie cutpoint from validation covariates/scores, exact round(q*n_valid) there. Apply same cutpoints to test. Test actual quota may differ from nominal; random benchmark matched to realized test proportion q_n, not silently called exactly10%",
+  "fractions": [
+    0.05,
+    0.1,
+    0.2,
+    0.3,
+    0.5
+  ],
+  "primary_fraction": 0.1,
+  "evaluation": "mean((pi-q_n)*Gamma) where q_n=mean(pi); frozen threshold policy target covariance under released benchmark distribution",
+  "inference": "iid influence-function normal approximation: IF_i=(pi_i-q_n)*(Gamma_i-mean(Gamma))-Delta_hat; sample variance(IF)/n. Includes uncertainty in realized policy fraction and ATE, not model training, sampling design, or actual original ad clusters",
+  "multiplicity": "two-sided Bonferroni normal intervals alpha=.05/30 for all six candidates x five fractions against expected random; direct candidate pairs outside this family reported exploratory",
+  "success": "validation-selected fixed10% model has test gain>0 and Bonferroni lower bound>0; report all 30 regardless. No success promise",
+  "robustness": "unadjusted IPW and SNIPS point estimates; e=.84/.86 sensitivity on selected model; two prespecified hash halves of test descriptive consistency only; no model reselection from test",
+  "economic_scope": "No original ROI/business rate recovery, online profitability or production effectiveness claim",
+  "no_api": true,
+  "no_database": true,
+  "no_refit_after_test": true
+}

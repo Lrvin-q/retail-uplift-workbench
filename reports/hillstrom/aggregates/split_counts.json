@@ -1,0 +1,38 @@
+{
+  "train": {
+    "control": {
+      "n": 12784,
+      "purchases": 73,
+      "purchase_rate": 0.0057102628285356696
+    },
+    "mens": {
+      "n": 12784,
+      "purchases": 151,
+      "purchase_rate": 0.011811639549436795
+    }
+  },
+  "valid": {
+    "control": {
+      "n": 4261,
+      "purchases": 21,
+      "purchase_rate": 0.00492842055855433
+    },
+    "mens": {
+      "n": 4261,
+      "purchases": 61,
+      "purchase_rate": 0.014315888289134006
+    }
+  },
+  "test": {
+    "control": {
+      "n": 4261,
+      "purchases": 28,
+      "purchase_rate": 0.006571227411405773
+    },
+    "mens": {
+      "n": 4262,
+      "purchases": 55,
+      "purchase_rate": 0.012904739558892538
+    }
+  }
+}

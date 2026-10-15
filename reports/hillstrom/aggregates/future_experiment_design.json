@@ -1,0 +1,206 @@
+{
+  "baseline_plugin": 0.0064065872003516945,
+  "assumed_q": 0.1,
+  "alpha": 0.05,
+  "two_sided": true,
+  "rows": [
+    {
+      "baseline_scenario": "historical_plugin",
+      "p_random": 0.0064065872003516945,
+      "delta_pp": 0.02,
+      "target_power": 0.8,
+      "n_per_arm": 2536702,
+      "n_total": 5073404,
+      "simulated_power": 0.8024,
+      "power_mcse": 0.005631238584894091,
+      "assumed_expected_additional_purchases": 507.34040000000005
+    },
+    {
+      "baseline_scenario": "historical_plugin",
+      "p_random": 0.0064065872003516945,
+      "delta_pp": 0.02,
+      "target_power": 0.9,
+      "n_per_arm": 3395931,
+      "n_total": 6791862,
+      "simulated_power": 0.8942,
+      "power_mcse": 0.00434985884828462,
+      "assumed_expected_additional_purchases": 679.1862
+    },
+    {
+      "baseline_scenario": "historical_plugin",
+      "p_random": 0.0064065872003516945,
+      "delta_pp": 0.05,
+      "target_power": 0.8,
+      "n_per_arm": 415045,
+      "n_total": 830090,
+      "simulated_power": 0.8012,
+      "power_mcse": 0.0056440864628387825,
+      "assumed_expected_additional_purchases": 207.5225
+    },
+    {
+      "baseline_scenario": "historical_plugin",
+      "p_random": 0.0064065872003516945,
+      "delta_pp": 0.05,
+      "target_power": 0.9,
+      "n_per_arm": 555629,
+      "n_total": 1111258,
+      "simulated_power": 0.9046,
+      "power_mcse": 0.00415448769404845,
+      "assumed_expected_additional_purchases": 277.8145
+    },
+    {
+      "baseline_scenario": "historical_plugin",
+      "p_random": 0.0064065872003516945,
+      "delta_pp": 0.1,
+      "target_power": 0.8,
+      "n_per_arm": 107529,
+      "n_total": 215058,
+      "simulated_power": 0.8028,
+      "power_mcse": 0.005626938066124418,
+      "assumed_expected_additional_purchases": 107.529
+    },
+    {
+      "baseline_scenario": "historical_plugin",
+      "p_random": 0.0064065872003516945,
+      "delta_pp": 0.1,
+      "target_power": 0.9,
+      "n_per_arm": 143951,
+      "n_total": 287902,
+      "simulated_power": 0.9004,
+      "power_mcse": 0.004235087720461053,
+      "assumed_expected_additional_purchases": 143.951
+    },
+    {
+      "baseline_scenario": "low_rate",
+      "p_random": 0.003,
+      "delta_pp": 0.02,
+      "target_power": 0.8,
+      "n_per_arm": 1212488,
+      "n_total": 2424976,
+      "simulated_power": 0.8044,
+      "power_mcse": 0.005609645978134449,
+      "assumed_expected_additional_purchases": 242.4976
+    },
+    {
+      "baseline_scenario": "low_rate",
+      "p_random": 0.003,
+      "delta_pp": 0.02,
+      "target_power": 0.9,
+      "n_per_arm": 1623180,
+      "n_total": 3246360,
+      "simulated_power": 0.9004,
+      "power_mcse": 0.004235087720461053,
+      "assumed_expected_additional_purchases": 324.636
+    },
+    {
+      "baseline_scenario": "low_rate",
+      "p_random": 0.003,
+      "delta_pp": 0.05,
+      "target_power": 0.8,
+      "n_per_arm": 203107,
+      "n_total": 406214,
+      "simulated_power": 0.7978,
+      "power_mcse": 0.0056800556335303625,
+      "assumed_expected_additional_purchases": 101.5535
+    },
+    {
+      "baseline_scenario": "low_rate",
+      "p_random": 0.003,
+      "delta_pp": 0.05,
+      "target_power": 0.9,
+      "n_per_arm": 271903,
+      "n_total": 543806,
+      "simulated_power": 0.9024,
+      "power_mcse": 0.004197004646173268,
+      "assumed_expected_additional_purchases": 135.9515
+    },
+    {
+      "baseline_scenario": "low_rate",
+      "p_random": 0.003,
+      "delta_pp": 0.1,
+      "target_power": 0.8,
+      "n_per_arm": 54470,
+      "n_total": 108940,
+      "simulated_power": 0.796,
+      "power_mcse": 0.005698841987632224,
+      "assumed_expected_additional_purchases": 54.47
+    },
+    {
+      "baseline_scenario": "low_rate",
+      "p_random": 0.003,
+      "delta_pp": 0.1,
+      "target_power": 0.9,
+      "n_per_arm": 72920,
+      "n_total": 145840,
+      "simulated_power": 0.8994,
+      "power_mcse": 0.00425393088801405,
+      "assumed_expected_additional_purchases": 72.92
+    },
+    {
+      "baseline_scenario": "high_rate",
+      "p_random": 0.01,
+      "delta_pp": 0.02,
+      "target_power": 0.8,
+      "n_per_arm": 3923546,
+      "n_total": 7847092,
+      "simulated_power": 0.8,
+      "power_mcse": 0.005656854249492379,
+      "assumed_expected_additional_purchases": 784.7092
+    },
+    {
+      "baseline_scenario": "high_rate",
+      "p_random": 0.01,
+      "delta_pp": 0.02,
+      "target_power": 0.9,
+      "n_per_arm": 5252526,
+      "n_total": 10505052,
+      "simulated_power": 0.9034,
+      "power_mcse": 0.004177761122898245,
+      "assumed_expected_additional_purchases": 1050.5052
+    },
+    {
+      "baseline_scenario": "high_rate",
+      "p_random": 0.01,
+      "delta_pp": 0.05,
+      "target_power": 0.8,
+      "n_per_arm": 636916,
+      "n_total": 1273832,
+      "simulated_power": 0.8072,
+      "power_mcse": 0.005579035042012194,
+      "assumed_expected_additional_purchases": 318.458
+    },
+    {
+      "baseline_scenario": "high_rate",
+      "p_random": 0.01,
+      "delta_pp": 0.05,
+      "target_power": 0.9,
+      "n_per_arm": 852651,
+      "n_total": 1705302,
+      "simulated_power": 0.9036,
+      "power_mcse": 0.004173896021704423,
+      "assumed_expected_additional_purchases": 426.32550000000003
+    },
+    {
+      "baseline_scenario": "high_rate",
+      "p_random": 0.01,
+      "delta_pp": 0.1,
+      "target_power": 0.8,
+      "n_per_arm": 163004,
+      "n_total": 326008,
+      "simulated_power": 0.7858,
+      "power_mcse": 0.005802040330780199,
+      "assumed_expected_additional_purchases": 163.004
+    },
+    {
+      "baseline_scenario": "high_rate",
+      "p_random": 0.01,
+      "delta_pp": 0.1,
+      "target_power": 0.9,
+      "n_per_arm": 218216,
+      "n_total": 436432,
+      "simulated_power": 0.9062,
+      "power_mcse": 0.004123143461001569,
+      "assumed_expected_additional_purchases": 218.216
+    }
+  ]
+}

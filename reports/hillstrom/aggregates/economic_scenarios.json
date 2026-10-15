@@ -1,0 +1,164 @@
+[
+  {
+    "policy": "lr",
+    "assumed_value_per_incremental_buyer": 10,
+    "assumed_cost_per_contact": 0,
+    "net_per_assigned_customer": 0.008995128505591428,
+    "net_ci_low": -0.009934708264739255,
+    "net_ci_high": 0.027282567933496815,
+    "realized_q": 0.09996480112636395
+  },
+  {
+    "policy": "lr",
+    "assumed_value_per_incremental_buyer": 10,
+    "assumed_cost_per_contact": 0.01,
+    "net_per_assigned_customer": 0.007995480494327788,
+    "net_ci_low": -0.010934356276002895,
+    "net_ci_high": 0.026282919922233177,
+    "realized_q": 0.09996480112636395
+  },
+  {
+    "policy": "lr",
+    "assumed_value_per_incremental_buyer": 10,
+    "assumed_cost_per_contact": 0.1,
+    "net_per_assigned_customer": -0.0010013516070449674,
+    "net_ci_low": -0.01993118837737565,
+    "net_ci_high": 0.01728608782086042,
+    "realized_q": 0.09996480112636395
+  },
+  {
+    "policy": "lr",
+    "assumed_value_per_incremental_buyer": 30,
+    "assumed_cost_per_contact": 0,
+    "net_per_assigned_customer": 0.026985385516774287,
+    "net_ci_low": -0.029804124794217766,
+    "net_ci_high": 0.08184770380049045,
+    "realized_q": 0.09996480112636395
+  },
+  {
+    "policy": "lr",
+    "assumed_value_per_incremental_buyer": 30,
+    "assumed_cost_per_contact": 0.01,
+    "net_per_assigned_customer": 0.02598573750551065,
+    "net_ci_low": -0.030803772805481404,
+    "net_ci_high": 0.08084805578922681,
+    "realized_q": 0.09996480112636395
+  },
+  {
+    "policy": "lr",
+    "assumed_value_per_incremental_buyer": 30,
+    "assumed_cost_per_contact": 0.1,
+    "net_per_assigned_customer": 0.016988905404137892,
+    "net_ci_low": -0.039800604906854165,
+    "net_ci_high": 0.07185122368785404,
+    "realized_q": 0.09996480112636395
+  },
+  {
+    "policy": "lr",
+    "assumed_value_per_incremental_buyer": 100,
+    "assumed_cost_per_contact": 0,
+    "net_per_assigned_customer": 0.08995128505591428,
+    "net_ci_low": -0.09934708264739256,
+    "net_ci_high": 0.27282567933496815,
+    "realized_q": 0.09996480112636395
+  },
+  {
+    "policy": "lr",
+    "assumed_value_per_incremental_buyer": 100,
+    "assumed_cost_per_contact": 0.01,
+    "net_per_assigned_customer": 0.08895163704465064,
+    "net_ci_low": -0.1003467306586562,
+    "net_ci_high": 0.27182603132370453,
+    "realized_q": 0.09996480112636395
+  },
+  {
+    "policy": "lr",
+    "assumed_value_per_incremental_buyer": 100,
+    "assumed_cost_per_contact": 0.1,
+    "net_per_assigned_customer": 0.07995480494327789,
+    "net_ci_low": -0.10934356276002896,
+    "net_ci_high": 0.2628291992223318,
+    "realized_q": 0.09996480112636395
+  },
+  {
+    "policy": "hgb",
+    "assumed_value_per_incremental_buyer": 10,
+    "assumed_cost_per_contact": 0,
+    "net_per_assigned_customer": 0.013728547410059378,
+    "net_ci_low": -0.0031103886356121688,
+    "net_ci_high": 0.030806068404603724,
+    "realized_q": 0.09996480112636395
+  },
+  {
+    "policy": "hgb",
+    "assumed_value_per_incremental_buyer": 10,
+    "assumed_cost_per_contact": 0.01,
+    "net_per_assigned_customer": 0.012728899398795738,
+    "net_ci_low": -0.004110036646875808,
+    "net_ci_high": 0.029806420393340086,
+    "realized_q": 0.09996480112636395
+  },
+  {
+    "policy": "hgb",
+    "assumed_value_per_incremental_buyer": 10,
+    "assumed_cost_per_contact": 0.1,
+    "net_per_assigned_customer": 0.0037320672974229824,
+    "net_ci_low": -0.013106868748248564,
+    "net_ci_high": 0.02080958829196733,
+    "realized_q": 0.09996480112636395
+  },
+  {
+    "policy": "hgb",
+    "assumed_value_per_incremental_buyer": 30,
+    "assumed_cost_per_contact": 0,
+    "net_per_assigned_customer": 0.041185642230178135,
+    "net_ci_low": -0.009331165906836506,
+    "net_ci_high": 0.09241820521381117,
+    "realized_q": 0.09996480112636395
+  },
+  {
+    "policy": "hgb",
+    "assumed_value_per_incremental_buyer": 30,
+    "assumed_cost_per_contact": 0.01,
+    "net_per_assigned_customer": 0.04018599421891449,
+    "net_ci_low": -0.010330813918100146,
+    "net_ci_high": 0.09141855720254753,
+    "realized_q": 0.09996480112636395
+  },
+  {
+    "policy": "hgb",
+    "assumed_value_per_incremental_buyer": 30,
+    "assumed_cost_per_contact": 0.1,
+    "net_per_assigned_customer": 0.03118916211754174,
+    "net_ci_low": -0.0193276460194729,
+    "net_ci_high": 0.08242172510117476,
+    "realized_q": 0.09996480112636395
+  },
+  {
+    "policy": "hgb",
+    "assumed_value_per_incremental_buyer": 100,
+    "assumed_cost_per_contact": 0,
+    "net_per_assigned_customer": 0.13728547410059377,
+    "net_ci_low": -0.031103886356121685,
+    "net_ci_high": 0.30806068404603726,
+    "realized_q": 0.09996480112636395
+  },
+  {
+    "policy": "hgb",
+    "assumed_value_per_incremental_buyer": 100,
+    "assumed_cost_per_contact": 0.01,
+    "net_per_assigned_customer": 0.13628582608933013,
+    "net_ci_low": -0.03210353436738533,
+    "net_ci_high": 0.30706103603477364,
+    "realized_q": 0.09996480112636395
+  },
+  {
+    "policy": "hgb",
+    "assumed_value_per_incremental_buyer": 100,
+    "assumed_cost_per_contact": 0.1,
+    "net_per_assigned_customer": 0.12728899398795737,
+    "net_ci_low": -0.04110036646875808,
+    "net_ci_high": 0.2980642039334009,
+    "realized_q": 0.09996480112636395
+  }
+]

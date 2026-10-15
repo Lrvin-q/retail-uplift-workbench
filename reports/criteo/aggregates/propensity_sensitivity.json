@@ -1,0 +1,55 @@
+{
+  "status": "exploratory robustness, does not replace primary",
+  "method": "TRAIN-only HGB7 40 iterations/minleaf10000 for T|X, same native categorical maps",
+  "propensity_range": [
+    0.8418310532777984,
+    0.9218667783279353
+  ],
+  "propensity_quantiles": [
+    0.8418310532777984,
+    0.8470757039548467,
+    0.8484440003347223,
+    0.8832614824649424,
+    0.9218667783279353
+  ],
+  "clipped_n": 0,
+  "results": [
+    {
+      "candidate": "purchase_hgb31",
+      "n": 6990115,
+      "n_selected": 698061,
+      "actual_fraction": 0.0998640222657281,
+      "ate": 0.0009198425002903645,
+      "policy_value": 0.0007922143855686905,
+      "random_value": 9.185917192995998e-05,
+      "gain": 0.0007003552136387308,
+      "se": 4.265036366957506e-05,
+      "ci_low": 0.0006167620369188281,
+      "ci_high": 0.0007839483903586335,
+      "joint_ci_low": 0.0005643510831827097,
+      "joint_ci_high": 0.0008363593440947519,
+      "nominal_alpha": 0.05,
+      "family_size": 35,
+      "critical": 3.188815258638476
+    },
+    {
+      "candidate": "s_hgb7",
+      "n": 6990115,
+      "n_selected": 698030,
+      "actual_fraction": 0.0998595874316803,
+      "ate": 0.0009198425002903645,
+      "policy_value": 0.0007813351956453642,
+      "random_value": 9.185509258112107e-05,
+      "gain": 0.000689480103064243,
+      "se": 4.181119398152224e-05,
+      "ci_low": 0.0006075316687098415,
+      "ci_high": 0.0007714285374186445,
+      "joint_ci_low": 0.0005561519297140717,
+      "joint_ci_high": 0.0008228082764144143,
+      "nominal_alpha": 0.05,
+      "family_size": 35,
+      "critical": 3.188815258638476
+    }
+  ],
+  "caveat": "Estimated propensity and diagnostic balance do not prove identification or recover original untransformed business effect"
+}

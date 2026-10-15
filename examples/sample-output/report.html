@@ -1,0 +1,44 @@
+<!doctype html><html lang="zh-CN"><meta charset="utf-8"><title>合成实验演示</title><style>body{max-width:1100px;margin:40px auto;padding:0 24px;font:16px/1.8 system-ui;background:#f4f7fb;color:#16324f}pre{white-space:pre-wrap;background:white;padding:28px;border-radius:12px}</style><h1>营销实验与选人策略 · 合成数据演示</h1><pre># 合成营销实验：离线演示
+
+&gt; 仅为机制已知的合成数据演示，不是 Hillstrom/Criteo 结果或真实业务收益证明。
+
+## SQL 与实验口径
+
+全部分配客户 2000 人；SQL/Python 结果核对：True。
+合成数据演示（不是 Hillstrom 实测）：以全部分配客户为分母，邮件组 208/997，无邮件组 90/1003。购买率差 11.89 个百分点，95% 区间 [8.80, 14.98] 个百分点。
+
+## 固定触达比例的模型比较
+
+训练/验证/测试互斥；预处理仅在训练集拟合。触达比例固定20%，验证集保留，本演示不调参。
+以下为SNIPS策略总体增量及配对差值，单位为百分点，分母是全部测试客户。随机基线是一份固定随机排序。
+区间对已训练模型条件化，未包含训练不确定性。
+
+|策略|选中人数|总体增量估计|95%区间|
+|---|---:|---:|---|
+|none|0|0.00|[0.00, 0.00]|
+|purchase_probability|80|1.08|[-1.42, 3.48]|
+|random|80|4.83|[1.63, 8.38]|
+|uplift|80|3.68|[1.21, 6.35]|
+|all_treat|400|13.50|[7.70, 20.25]|
+
+|配对比较|差值|95%区间|
+|---|---:|---|
+|purchase_probability − random|-3.75|[-7.38, -0.45]|
+|uplift − purchase_probability|2.61|[-0.38, 6.53]|
+|uplift − random|-1.14|[-4.26, 2.26]|
+
+## 请求处理
+
+|问题|状态|说明|
+|---|---|---|
+|男装邮件十四天购买率|answer|程序模板生成结果|
+|邮件效果怎么样|clarify|缺少分析条件|
+|男装邮件七天购买率|refuse|问题指定了「七天」（约 7 天）的结果窗口，而本实验的结果窗口**固定为 14 天**（docs/02-分析协议.md §8.2）；换窗口需要走协议变更流程|
+|男装与女装购买率直接比较|refuse|本版未登记男装与女装的直接比较；不能替换成邮件组与无邮件组。|
+|只看访问者的男装邮件购买率|refuse|`只看访问者` 要求按干预后字段 `visit` 筛选人群作为分母，这会破坏随机化，使「干预效果」与「人群差异」无法区分（AGENTS.md §2.2）|
+
+## 可复核产物
+
+`result.json` 为数值与划分来源；`workflow_cases.json` 保存各问题的计划和终态；`customer_outcomes.sql` 为实际执行的 SQLite 查询。
+离线适配器不提供真实数据检索、完整数据库归档、名单服务或澄清恢复。完整产品代码见 dsa.agent.graph。
+</pre></html>

@@ -1,0 +1,49 @@
+{
+  "training_treatment_fraction": 0.849910342159175,
+  "validation_treatment_fraction": 0.8504497879816193,
+  "validation_treatment_auc": 0.5104333082310929,
+  "mean_predicted_treatment": 0.8498970970862705,
+  "numeric_smd": [
+    {
+      "feature": "f0",
+      "smd": -0.006464112036246522
+    },
+    {
+      "feature": "f2",
+      "smd": -0.007977426840974326
+    },
+    {
+      "feature": "f7",
+      "smd": 0.020156586571424075
+    },
+    {
+      "feature": "f10",
+      "smd": 0.008845299920393368
+    }
+  ],
+  "model_params": {
+    "max_iter": 40,
+    "learning_rate": 0.05,
+    "max_leaf_nodes": 7,
+    "min_samples_leaf": 10000,
+    "l2_regularization": 30,
+    "early_stopping": false,
+    "random_state": 20261021,
+    "categorical_features": [
+      false,
+      true,
+      false,
+      true,
+      true,
+      true,
+      true,
+      false,
+      true,
+      true,
+      false,
+      true
+    ],
+    "max_bins": 255
+  },
+  "caution": "Weak pre-treatment predictability/balance does not prove unconfoundedness, correct sampling or original blocked allocation probabilities"
+}

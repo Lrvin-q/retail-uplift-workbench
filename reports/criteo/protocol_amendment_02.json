@@ -1,0 +1,8 @@
+{
+  "registered_at": "2026-10-15T00:23:03.135Z",
+  "stage": "After development allocation audit, before inspecting any held-out purchase model estimates; frozen candidate selection retained",
+  "reason": "Experimental feature-only treatment classifier validation AUC=0.51043; published nonuniform negative sampling may affect constant-propensity assumptions",
+  "change": "Additional exploratory propensity sensitivity only: fit fixed HGB7/40 iterations/minleaf10000 to TRAIN treatment labels and pre-treatment X; evaluate same frozen selected mask using clipped [.05,.95] ehat(X). Do not reselect or refit purchase models, replace primary result or treat audit as identification proof",
+  "primary_unchanged": "e=.85 and seven candidates/five thresholds/35-contrast Bonferroni family unchanged",
+  "interpretation": "Agreement supports numerical robustness only; cannot recover original campaign treatment probabilities, original sales rates or unobserved confounding"
+}

@@ -1,0 +1,337 @@
+# 指标字典（机器可读版本）v1.0
+#
+# 与 docs/03-指标字典.md 一一对应。Agent 与工具在分析前按标识读取本文件，
+# 用于校验「当前数据适配是否支持所请求的分析类型」。
+#
+# 修改本文件必须同步更新 docs/03-指标字典.md，并递增 schema_version。
+
+schema_version: "1.0"
+updated: "2026-10-11"
+
+# ---------------------------------------------------------------- 数据集
+datasets:
+  retailhero:
+    id: retailhero
+    version: "retailhero@2019"
+    file: data/raw/retailhero-uplift.zip
+    sha256: 866ACE4FF511AA3AD548EFBA204B61C48048F020BA327616FAFC2939C1E00362
+    rows: 400162
+    grain: customer            # 特征/标签为客户端；购买明细为「交易-商品」级
+    source_url: https://ods.ai/competitions/x5-retailhero-uplift-modeling/data
+    source_verified: docs/07-阶段五数据获取核查.md
+    acquisition_note: >-
+      官方源 storage.yandexcloud.net 被 DNS 层面封锁；用 8.8.8.8 解析出
+      213.180.193.243 后以 curl --resolve 取得。与代理无关。见 docs/日志.md L025。
+    # 数据本身支持的分析能力（超出即返回能力限制）
+    #
+    # ⚠️ causal_inference 刻意设为 null（未确认）而不是 true：
+    #    - SRM 检验通过：对照 100,058 / 干预 99,981，chi2=0.0296，df=1，p=0.8633
+    #    - 但**随机化机制本身没有任何文档说明**。SRM 只能证明「分配是均衡的」，
+    #      不能证明「分配是随机的」——一个非随机的分配同样可能均衡。
+    #    依《实现蓝图.md》「没有可支持的因果设计时，仍可验证 SQL 与特征工程，
+    #    但不能据此开放因果决策」，此处标记为未确认，只开放数据工程与描述性功能。
+    #    要开放因果功能，需补充触达时点、结果窗口与随机化方式的证据。
+    capabilities:
+      randomized_experiment: null     # 未确认（SRM 通过但机制无文档）
+      srm_passed: true                # p=0.8633 > 0.001
+      event_timeline: true            # 有逐笔交易明细（4,578 万行）
+      arbitrary_date_window: false    # 时间范围固定 2018-11-21 ~ 2019-03-18
+      outcome_window_known: false     # 触达后观察窗口长度数据中未给出
+      cost_data: false                # 无成本/毛利
+      multi_table: true               # customers/products/purchases/labels 多表
+      transaction_amount_redundant: true  # purchase_sum 冗余在明细行，聚合必须先按交易去重
+
+    # ------------------------------------------------------------ 字段（要点）
+    fields:
+      client_id:
+        type: string
+        role: key
+        description: 客户标识，贯穿 clients/purchases/uplift_train/uplift_test
+      transaction_id:
+        type: string
+        role: key
+        description: 交易标识。**同一 transaction_id 有多行**（每行一个 product_id）
+      purchase_sum:
+        type: number
+        role: transaction_level_amount
+        warning: >-
+          **交易级字段被冗余到每一行商品明细上**。多行交易中该值 100% 一致，
+          直接 sum() 会虚高约 10 倍（本项目实测 11.41x / 10.34x）且**不报错**。
+          聚合时必须先按 transaction_id 收敛（用 max）再做客户级聚合。
+          见 docs/日志.md L026。
+      product_quantity:
+        type: number
+        role: line_level_quantity
+        description: 明细级字段，可直接求和（与 purchase_sum 不同）
+      treatment_flg:
+        type: integer
+        role: treatment
+        values: [0, 1]
+      target:
+        type: integer
+        role: label
+        values: [0, 1]
+        description: 购买标签。**观察窗口长度未在数据中说明**
+
+  hillstrom:
+    id: hillstrom
+    version: "hillstrom@2008-03-20"
+    file: data/raw/hillstrom_email_analytics_2008-03-20.csv
+    sha256: 0E5893329D8B93CEFECC571777672028290AB69865718020C78C7284F291AECE
+    rows: 64000
+    grain: customer            # 一行代表一名客户
+    source_url: http://www.minethatdata.com/Kevin_Hillstrom_MineThatData_E-MailAnalytics_DataMiningChallenge_2008.03.20.csv
+    source_verified: docs/00-数据来源核查记录.md
+    # 数据本身支持的分析能力（超出即返回能力限制）
+    capabilities:
+      randomized_experiment: true
+      event_timeline: false          # 无逐次事件数据
+      arbitrary_date_window: false   # 无日期字段
+      cost_data: false               # 无成本/毛利
+      multi_table: false             # 单表数据集
+
+    # ------------------------------------------------------------ 字段
+    fields:
+      # --- 实验前特征（可作建模输入）---
+      recency:
+        type: integer
+        role: pre_treatment_feature
+        range: [1, 12]
+        description: 距上次购买的月数（单位待核实）
+      history_segment:
+        type: category
+        role: pre_treatment_feature
+        values: ["1) $0 - $100", "2) $100 - $200", "3) $200 - $350",
+                 "4) $350 - $500", "5) $500 - $750", "6) $750 - $1,000", "7) $1,000 +"]
+        description: 历史消费金额分箱
+      history:
+        type: number
+        role: pre_treatment_feature
+        range: [29.99, 3345.93]
+        description: 历史消费金额，需与 history_segment 交叉校验
+      mens:
+        type: boolean
+        role: pre_treatment_feature
+        description: 是否购买过男装
+      womens:
+        type: boolean
+        role: pre_treatment_feature
+        description: 是否购买过女装
+      zip_code:
+        type: category
+        role: pre_treatment_feature
+        values: [Surburban, Urban, Rural]   # 原始数据拼写为 Surburban，勿"修正"
+        description: 居住地类型
+      newbie:
+        type: boolean
+        role: pre_treatment_feature
+        description: 是否新客户
+      channel:
+        type: category
+        role: pre_treatment_feature
+        values: [Web, Phone, Multichannel]
+        description: 历史购买渠道
+
+      # --- 分组 ---
+      segment:
+        type: category
+        role: assignment
+        values: ["Mens E-Mail", "Womens E-Mail", "No E-Mail"]
+        description: 随机分配的实验组
+
+      # --- 干预后结果（禁止作建模输入）---
+      visit:
+        type: boolean
+        role: post_treatment_outcome
+        description: 实验后两周内是否访问网站
+      conversion:
+        type: boolean
+        role: post_treatment_outcome
+        description: 实验后两周内是否购买
+      spend:
+        type: number
+        role: post_treatment_outcome
+        range: [0, 499.0]
+        description: 实验后两周内消费金额，未购买者为 0
+
+    quality_checks:
+      missing_values: 0
+      exact_duplicate_rows: 6562
+      dedupe_on_full_row: forbidden   # 不同客户可能有相同字段值，禁止按整行去重
+
+# ---------------------------------------------------------------- 实验
+experiments:
+  hillstrom_email_v1:
+    id: hillstrom_email_v1
+    dataset: hillstrom
+    description: Hillstrom 邮件营销随机实验
+    randomization_unit: customer
+    analysis_unit: customer
+    outcome_window:
+      value: 2
+      unit: weeks
+      fixed: true
+      note: 实验后两周，数据已固化，不支持任意窗口
+    arms:
+      - id: mens
+        segment_value: "Mens E-Mail"
+        role: treatment
+        count: 21307
+      - id: womens
+        segment_value: "Womens E-Mail"
+        role: treatment
+        count: 21387
+      - id: control
+        segment_value: "No E-Mail"
+        role: control
+        count: 21306
+    # SRM 的预期比例来源：原始实验说明明确写出 1/3 each
+    expected_allocation:
+      source: original_description
+      source_note: 原始说明写有 "1/3 were randomly chosen to..."，见 docs/00-数据来源核查记录.md §3.3
+      ratios: {mens: 0.3333333333, womens: 0.3333333333, control: 0.3333333333}
+      infer_from_observed: forbidden   # 禁止从观测比例反推预期比例
+    comparisons:
+      - id: primary
+        treatment: mens
+        control: control
+        type: confirmatory
+        alpha: 0.05
+        sided: two
+      - id: secondary_womens
+        treatment: womens
+        control: control
+        type: exploratory
+        alpha: 0.05
+        sided: two
+        multiplicity_note: 与主要比较同时报告时需 Bonferroni 校正至 0.025
+        correction_alpha: 0.025
+
+# ---------------------------------------------------------------- 指标
+metrics:
+  conversion_rate:
+    id: conversion_rate
+    name_zh: 购买率
+    role: primary
+    grain: customer
+    numerator: "COUNT(customers WHERE conversion = 1)"
+    denominator: "COUNT(all assigned customers in arm)"
+    unit: customer
+    constraints:
+      - 分母不得按 visit 过滤
+      - 分母不得按任何干预后行为过滤
+    forbidden_filters: [visit, spend, conversion]
+
+  visit_rate:
+    id: visit_rate
+    name_zh: 访问率
+    role: secondary
+    grain: customer
+    numerator: "COUNT(customers WHERE visit = 1)"
+    denominator: "COUNT(all assigned customers in arm)"
+    unit: customer
+
+  spend_per_customer:
+    id: spend_per_customer
+    name_zh: 人均消费
+    role: secondary
+    grain: customer
+    numerator: "SUM(spend)"
+    denominator: "COUNT(all assigned customers in arm)"
+    unit: currency
+    constraints:
+      - 分母必须包含未购买客户（spend = 0）
+
+  spend_per_buyer:
+    id: spend_per_buyer
+    name_zh: 购买者人均消费
+    role: descriptive_only
+    grain: customer
+    numerator: "SUM(spend)"
+    denominator: "COUNT(customers WHERE conversion = 1)"
+    unit: currency
+    constraints:
+      - 条件于干预后结果，仅作描述，禁止用于因果结论
+
+# ---------------------------------------------------------------- 效果量
+effect_measures:
+  risk_difference:
+    id: risk_difference
+    name_zh: 绝对差异（风险差）
+    formula: "p_treatment - p_control"
+    role: primary_effect
+  risk_ratio:
+    id: risk_ratio
+    name_zh: 风险比
+    formula: "p_treatment / p_control"
+    role: auxiliary
+    edge_case: 对照组比例为 0 或极小时不报告
+  relative_lift:
+    id: relative_lift
+    name_zh: 相对提升
+    formula: "p_treatment / p_control - 1"
+    role: auxiliary
+    edge_case: 同上
+
+# ---------------------------------------------------------------- 不确定性
+uncertainty_methods:
+  wilson_ci:
+    id: wilson_ci
+    applies_to: [conversion_rate, visit_rate]
+    description: Wilson score interval，单比例
+  newcombe_ci:
+    id: newcombe_ci
+    applies_to: [risk_difference]
+    description: Newcombe hybrid score interval，比例之差
+  katz_ci:
+    id: katz_ci
+    applies_to: [risk_ratio]
+    description: Katz 对数法
+  bootstrap_ci:
+    id: bootstrap_ci
+    applies_to: [spend_per_customer]
+    description: Bootstrap 百分位区间，必须固定随机种子
+  forbidden:
+    - id: wald_ci
+      reason: 购买率为小比例（0.6%~1.3%），Wald 区间覆盖率不足且可能越界
+
+# ---------------------------------------------------------------- 数据质量
+quality_metrics:
+  srm_p_value:
+    id: srm_p_value
+    name_zh: SRM 检验 p 值
+    method: chi_square_goodness_of_fit
+    alpha: 0.001
+    interpretation_rules:
+      - 异常仅提示需要诊断，不得自动断定原因
+      - 通过检查不能证明随机化完全正确
+  outcome_coverage:
+    id: outcome_coverage
+    name_zh: 结果字段覆盖率
+    formula: "非缺失结果客户数 / 总客户数"
+  join_row_ratio:
+    id: join_row_ratio
+    name_zh: 关联膨胀比
+    formula: "关联后行数 / 关联前客户数"
+    expected: 1.0
+  duplicate_customer_count:
+    id: duplicate_customer_count
+    name_zh: 内部客户 ID 重复数
+    expected: 0
+
+# ---------------------------------------------------------------- 明确不提供
+unsupported_metrics:
+  - id: daily_conversion_trend
+    reason: 无日期字段与事件时间线
+  - id: multi_touch_attribution
+    reason: 无触点链路数据
+  - id: net_revenue
+    reason: 无成本与毛利数据
+  - id: roi
+    reason: 无成本与毛利数据
+  - id: individual_uplift_label
+    reason: 每名客户只观测一个干预结果，原理上不可得
+  - id: customer_ltv
+    reason: 仅有两周窗口数据
+  - id: retention_rate
+    reason: 窗口过短且为单次快照

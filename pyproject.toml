@@ -1,0 +1,57 @@
+[build-system]
+requires = ["setuptools>=68", "wheel"]
+build-backend = "setuptools.build_meta"
+
+[project]
+name = "retail-uplift-workbench"
+version = "0.1.0"
+description = "Auditable marketing experiment analysis and uplift policy evaluation portfolio"
+readme = "README.md"
+requires-python = ">=3.12"
+license = {file = "LICENSE"}
+dependencies = [
+    "pandas>=2.2,<4",
+    "numpy>=1.26,<3",
+    "scipy>=1.13,<2",
+    "statsmodels>=0.14,<0.16",
+    "scikit-learn>=1.4,<2",
+    "SQLAlchemy>=2.0,<3",
+    "langgraph>=1.0,<2",
+    "pydantic>=2.7,<3",
+    "pydantic-settings>=2.3,<3",
+    "python-dotenv>=1.0,<2",
+    "PyYAML>=6.0,<7",
+]
+
+[project.optional-dependencies]
+full = [
+    "pyarrow>=16,<26",
+    "psycopg[binary]>=3.2,<4",
+    "langgraph-checkpoint-postgres>=3.0,<4",
+    "langchain>=1.0,<2",
+    "langchain-core>=1.0,<2",
+    "langchain-deepseek>=1.0,<2",
+    "fastapi>=0.115,<1",
+    "uvicorn[standard]>=0.30,<1",
+    "streamlit>=1.40,<2",
+    "starlette>=0.40,<2",
+    "httpx>=0.27,<1",
+    "plotly>=5.24,<8",
+    "matplotlib>=3.9,<4",
+    "sqlglot>=25,<31",
+]
+dev = ["pytest>=8,<10"]
+
+[project.scripts]
+dsa-demo = "dsa.portfolio_demo:main"
+
+[tool.setuptools.packages.find]
+where = ["src"]
+
+[tool.setuptools.package-data]
+"dsa.resources" = ["*.yaml", "sql/*.sql"]
+
+[tool.pytest.ini_options]
+testpaths = ["tests"]
+addopts = "-ra --strict-markers -p no:randomly"
+markers = ["slow: simulation validation"]

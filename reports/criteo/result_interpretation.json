@@ -1,0 +1,16 @@
+{
+  "scope": "post-review interpretation annotation; original result and protocols unchanged",
+  "score_criterion_met": true,
+  "causal_purchase_gain_verified": false,
+  "dedicated_uplift_superiority_verified": false,
+  "historical_fields": {
+    "results/test_results.json.primary_target_met": "registered positive released-benchmark AIPW score contrast criterion only",
+    "protocol.json.success": "score threshold and adjusted interval criterion; not causal identification"
+  },
+  "reason": "Outcome-dependent release sampling and unknown sampling/design probabilities prevent establishing released-population or original-business causal gains from these files alone.",
+  "result_sha256": "025e68cefe14d0b45019306185ae2f7ec4d2a8ca540a39c2034974befbbeecce",
+  "protocol_sha256": "beb6ccb2bc0026273f8a0b85526a1be987670c39976e08c6c06e742fe8f77472",
+  "model_training_cache_binding": "known incomplete; existing joblib reuse not fully hash-validated",
+  "models_retrained_after_reviews": false,
+  "main_statistics_recomputed_for_selection_after_reviews": false
+}

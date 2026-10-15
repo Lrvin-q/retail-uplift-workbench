@@ -1,0 +1,79 @@
+{
+  "protocol_version": "1.0",
+  "frozen_at": "2026-10-14T18:00:49.988167+00:00",
+  "scope": "exploratory; historical test has been inspected; no untouched validation claim",
+  "dataset_version": "hillstrom@2008-03-20",
+  "arms": [
+    "mens",
+    "control"
+  ],
+  "outcome": "conversion",
+  "window_days": 14,
+  "baseline_model_key": "tlearner_lr_v1",
+  "split_seed": 20261011,
+  "ratios": [
+    0.6,
+    0.2,
+    0.2
+  ],
+  "primary_fraction": 0.1,
+  "fractions": [
+    0.05,
+    0.1,
+    0.2,
+    0.3,
+    0.5
+  ],
+  "bootstrap_repeats": 2000,
+  "bootstrap_seed": 20261015,
+  "training_bootstrap_repeats": 30,
+  "stability_seed": 20261016,
+  "nuisance_folds": 5,
+  "nuisance_seed": 20261017,
+  "simulation_repeats": 1000,
+  "simulation_seed": 20261018,
+  "simulation_deltas_pp": [
+    0,
+    0.02,
+    0.05,
+    0.1,
+    0.2
+  ],
+  "future_delta_pp": [
+    0.02,
+    0.05,
+    0.1
+  ],
+  "future_powers": [
+    0.8,
+    0.9
+  ],
+  "future_simulations": 5000,
+  "alpha": 0.05,
+  "hgb": {
+    "max_iter": 100,
+    "learning_rate": 0.05,
+    "max_leaf_nodes": 7,
+    "max_depth": 3,
+    "min_samples_leaf": 200,
+    "l2_regularization": 10.0,
+    "early_stopping": false,
+    "class_weight": null,
+    "random_state": 20261011
+  },
+  "baseline_tolerance": {
+    "atol": 1e-08,
+    "rtol": 1e-06
+  },
+  "independent_reviewer_rounds": 3,
+  "evaluation": {
+    "old": "SNIPS/Hajek with reranking paired bootstrap",
+    "new": "AIPW with nuisance ensemble independent of historical test outcomes",
+    "crossfit": "development-set ATE only; not adaptive-policy inference"
+  },
+  "policy_constraints": "same exact round(q*n) budget; descending score; stable customer-key tie order; no sign filter",
+  "simulation_design": "fixed empirical X; p0 from train-only LR; tau=b+a*(top10-q); b=.006805006519615695; a chosen so E[(pi-q)*tau]=delta; Bernoulli randomized T e=.5; fixed nuisance predictions; report model-conditional power only",
+  "no_api_calls": true,
+  "no_database_writes": true,
+  "no_product_model_replacement": true
+}

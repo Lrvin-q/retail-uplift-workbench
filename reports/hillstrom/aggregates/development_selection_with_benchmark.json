@@ -1,0 +1,1772 @@
+{
+  "all_cv": [
+    {
+      "candidate": "t_lr",
+      "fraction": 0.05,
+      "cv_gain": 0.0002885307820168467,
+      "positive_folds": 3,
+      "fold_gains": [
+        -0.0004041840768063966,
+        0.001008834743051507,
+        0.00048589131696664235,
+        0.00045757330551634174,
+        -0.000105461378643861
+      ],
+      "informative": true,
+      "evaluation": "development tuning score; no independent CI"
+    },
+    {
+      "candidate": "t_lr",
+      "fraction": 0.1,
+      "cv_gain": 0.0005393246924673814,
+      "positive_folds": 4,
+      "fold_gains": [
+        -0.000435536047355313,
+        0.0010152996496600659,
+        0.00017875517779741352,
+        0.0014750508875879841,
+        0.000463053794646756
+      ],
+      "informative": true,
+      "evaluation": "development tuning score; no independent CI"
+    },
+    {
+      "candidate": "t_lr",
+      "fraction": 0.2,
+      "cv_gain": 0.000730609564730631,
+      "positive_folds": 4,
+      "fold_gains": [
+        -0.000833938199052327,
+        0.0011508344055042214,
+        0.0018116704639712735,
+        0.0010709476916084366,
+        0.0004535334616215509
+      ],
+      "informative": true,
+      "evaluation": "development tuning score; no independent CI"
+    },
+    {
+      "candidate": "t_lr",
+      "fraction": 0.3,
+      "cv_gain": 0.0008035082121991207,
+      "positive_folds": 4,
+      "fold_gains": [
+        -0.0002521246756411082,
+        0.0010126984992692124,
+        0.001406224798353026,
+        0.0009050934497272391,
+        0.0009456489892872335
+      ],
+      "informative": true,
+      "evaluation": "development tuning score; no independent CI"
+    },
+    {
+      "candidate": "t_lr",
+      "fraction": 0.5,
+      "cv_gain": 0.0007131555762469861,
+      "positive_folds": 4,
+      "fold_gains": [
+        0.001223446990591089,
+        0.0008945725627051472,
+        0.0008203041788228405,
+        -0.00013599334075148033,
+        0.0007634474898673345
+      ],
+      "informative": true,
+      "evaluation": "development tuning score; no independent CI"
+    },
+    {
+      "candidate": "t_hgb_leaf100",
+      "fraction": 0.05,
+      "cv_gain": 0.0004038070006460754,
+      "positive_folds": 4,
+      "fold_gains": [
+        0.0007890626474052245,
+        0.0008088130649883627,
+        0.0005361842518574411,
+        -0.00036153829904638635,
+        0.00024651333802573513
+      ],
+      "informative": true,
+      "evaluation": "development tuning score; no independent CI"
+    },
+    {
+      "candidate": "t_hgb_leaf100",
+      "fraction": 0.1,
+      "cv_gain": 0.0005127638982136726,
+      "positive_folds": 5,
+      "fold_gains": [
+        0.0007574956627005498,
+        0.00015291062730317392,
+        0.0009686915449695776,
+        0.00022191614684292062,
+        0.00046280550925214094
+      ],
+      "informative": true,
+      "evaluation": "development tuning score; no independent CI"
+    },
+    {
+      "candidate": "t_hgb_leaf100",
+      "fraction": 0.2,
+      "cv_gain": 0.0008170443594044414,
+      "positive_folds": 4,
+      "fold_gains": [
+        -0.00019315963140066213,
+        0.0001999191388935215,
+        0.0002958297972954791,
+        0.0013045097568072051,
+        0.002478122735426663
+      ],
+      "informative": true,
+      "evaluation": "development tuning score; no independent CI"
+    },
+    {
+      "candidate": "t_hgb_leaf100",
+      "fraction": 0.3,
+      "cv_gain": 0.0003746998944045125,
+      "positive_folds": 4,
+      "fold_gains": [
+        1.4968806277119335e-05,
+        0.000146594111183766,
+        -0.00048057728969267327,
+        0.0006662159937575044,
+        0.0015262978504968462
+      ],
+      "informative": true,
+      "evaluation": "development tuning score; no independent CI"
+    },
+    {
+      "candidate": "t_hgb_leaf100",
+      "fraction": 0.5,
+      "cv_gain": 0.0006665215438371721,
+      "positive_folds": 5,
+      "fold_gains": [
+        0.001290255163418224,
+        0.00031856382656348655,
+        0.0004168761482604839,
+        5.008349934096412e-05,
+        0.001256829081602702
+      ],
+      "informative": true,
+      "evaluation": "development tuning score; no independent CI"
+    },
+    {
+      "candidate": "t_hgb_leaf200",
+      "fraction": 0.05,
+      "cv_gain": 0.0002828343734933953,
+      "positive_folds": 4,
+      "fold_gains": [
+        0.0002235048057329332,
+        0.0005225270307892547,
+        0.0005559682909223629,
+        -0.00010790305868161716,
+        0.0002200747987040431
+      ],
+      "informative": true,
+      "evaluation": "development tuning score; no independent CI"
+    },
+    {
+      "candidate": "t_hgb_leaf200",
+      "fraction": 0.1,
+      "cv_gain": 0.00044266641126224044,
+      "positive_folds": 5,
+      "fold_gains": [
+        0.0004503953237424305,
+        0.00015262558037883054,
+        0.0006577994746671947,
+        0.00040667050129484546,
+        0.0005458411762279011
+      ],
+      "informative": true,
+      "evaluation": "development tuning score; no independent CI"
+    },
+    {
+      "candidate": "t_hgb_leaf200",
+      "fraction": 0.2,
+      "cv_gain": 0.0010284889970422447,
+      "positive_folds": 5,
+      "fold_gains": [
+        0.00040680551283779485,
+        0.00048066362079414774,
+        0.0005022245451481201,
+        0.0012572041156161773,
+        0.0024955471908149843
+      ],
+      "informative": true,
+      "evaluation": "development tuning score; no independent CI"
+    },
+    {
+      "candidate": "t_hgb_leaf200",
+      "fraction": 0.3,
+      "cv_gain": 0.00040323075884546186,
+      "positive_folds": 4,
+      "fold_gains": [
+        0.0003870623099895589,
+        0.0001481937138785919,
+        -0.000470946783131248,
+        0.0012729902004316623,
+        0.0006788543530587445
+      ],
+      "informative": true,
+      "evaluation": "development tuning score; no independent CI"
+    },
+    {
+      "candidate": "t_hgb_leaf200",
+      "fraction": 0.5,
+      "cv_gain": 0.0005193487961819015,
+      "positive_folds": 4,
+      "fold_gains": [
+        0.0012984479820429271,
+        0.00024790033964314066,
+        -0.0001478372458562171,
+        0.00044644844913827877,
+        0.0007517844559413786
+      ],
+      "informative": true,
+      "evaluation": "development tuning score; no independent CI"
+    },
+    {
+      "candidate": "t_hgb_leaf500",
+      "fraction": 0.05,
+      "cv_gain": 0.00024738800912450315,
+      "positive_folds": 3,
+      "fold_gains": [
+        0.0007642174287711633,
+        0.0005659624755886096,
+        -0.00028664549782272085,
+        -0.00042453260820598767,
+        0.0006179382472914516
+      ],
+      "informative": true,
+      "evaluation": "development tuning score; no independent CI"
+    },
+    {
+      "candidate": "t_hgb_leaf500",
+      "fraction": 0.1,
+      "cv_gain": 0.00041680182460108686,
+      "positive_folds": 5,
+      "fold_gains": [
+        0.0007735764488126529,
+        0.0005511279201240164,
+        4.165685942994021e-05,
+        0.0006661267100686766,
+        5.152118457014829e-05
+      ],
+      "informative": true,
+      "evaluation": "development tuning score; no independent CI"
+    },
+    {
+      "candidate": "t_hgb_leaf500",
+      "fraction": 0.2,
+      "cv_gain": 0.00021368513483433163,
+      "positive_folds": 3,
+      "fold_gains": [
+        0.00013571644127949949,
+        7.82628490710624e-05,
+        -0.0003360572082324485,
+        -0.00010954095043680432,
+        0.001300044542490349
+      ],
+      "informative": true,
+      "evaluation": "development tuning score; no independent CI"
+    },
+    {
+      "candidate": "t_hgb_leaf500",
+      "fraction": 0.3,
+      "cv_gain": 0.0006237287039307464,
+      "positive_folds": 4,
+      "fold_gains": [
+        0.0005180271850456289,
+        5.262661085509604e-05,
+        -0.001085681625719774,
+        0.0015482312151024137,
+        0.0020854401343703677
+      ],
+      "informative": true,
+      "evaluation": "development tuning score; no independent CI"
+    },
+    {
+      "candidate": "t_hgb_leaf500",
+      "fraction": 0.5,
+      "cv_gain": 0.0004976125761319729,
+      "positive_folds": 3,
+      "fold_gains": [
+        0.0009653379534553698,
+        -1.4211955188429525e-05,
+        -0.00036095409478296617,
+        0.0006679830090082277,
+        0.0012299079681676625
+      ],
+      "informative": true,
+      "evaluation": "development tuning score; no independent CI"
+    },
+    {
+      "candidate": "t_rf_leaf100",
+      "fraction": 0.05,
+      "cv_gain": 0.000242820669574874,
+      "positive_folds": 3,
+      "fold_gains": [
+        -0.00015503327618074625,
+        0.0007695790206174662,
+        -3.557520518064864e-05,
+        0.0004125937524413467,
+        0.0002225390561769517
+      ],
+      "informative": true,
+      "evaluation": "development tuning score; no independent CI"
+    },
+    {
+      "candidate": "t_rf_leaf100",
+      "fraction": 0.1,
+      "cv_gain": 0.00016087089339825468,
+      "positive_folds": 4,
+      "fold_gains": [
+        -0.0007566890644056998,
+        0.0004563614043440045,
+        2.056515971325847e-05,
+        0.0003285007952359487,
+        0.0007556161721037616
+      ],
+      "informative": true,
+      "evaluation": "development tuning score; no independent CI"
+    },
+    {
+      "candidate": "t_rf_leaf100",
+      "fraction": 0.2,
+      "cv_gain": 0.0003329954639481459,
+      "positive_folds": 2,
+      "fold_gains": [
+        -5.187562405476049e-06,
+        -0.0007273710467783827,
+        0.0006716922802452815,
+        -0.0001463370868752107,
+        0.0018721807355545177
+      ],
+      "informative": true,
+      "evaluation": "development tuning score; no independent CI"
+    },
+    {
+      "candidate": "t_rf_leaf100",
+      "fraction": 0.3,
+      "cv_gain": 0.0007705003437694364,
+      "positive_folds": 5,
+      "fold_gains": [
+        1.7513466907363426e-05,
+        0.0003789622496319665,
+        0.0010309436911298787,
+        0.0005699858208981836,
+        0.0018550964902797895
+      ],
+      "informative": true,
+      "evaluation": "development tuning score; no independent CI"
+    },
+    {
+      "candidate": "t_rf_leaf100",
+      "fraction": 0.5,
+      "cv_gain": 0.0003310263701099415,
+      "positive_folds": 4,
+      "fold_gains": [
+        0.0009576834017733021,
+        0.0002682179273161565,
+        9.163144980892565e-06,
+        -3.077201664196311e-05,
+        0.00045083939312131916
+      ],
+      "informative": true,
+      "evaluation": "development tuning score; no independent CI"
+    },
+    {
+      "candidate": "t_rf_leaf500",
+      "fraction": 0.05,
+      "cv_gain": 0.00025256750176731914,
+      "positive_folds": 3,
+      "fold_gains": [
+        -0.0001428794402531299,
+        0.0005816927490318221,
+        -0.0003178612984313833,
+        0.0008399349237987796,
+        0.00030195057469050714
+      ],
+      "informative": true,
+      "evaluation": "development tuning score; no independent CI"
+    },
+    {
+      "candidate": "t_rf_leaf500",
+      "fraction": 0.1,
+      "cv_gain": 0.00023590926204652185,
+      "positive_folds": 3,
+      "fold_gains": [
+        -0.0001275841264609148,
+        0.0008183835897082491,
+        -0.00029524678536156597,
+        0.000730792517756531,
+        5.320111459030967e-05
+      ],
+      "informative": true,
+      "evaluation": "development tuning score; no independent CI"
+    },
+    {
+      "candidate": "t_rf_leaf500",
+      "fraction": 0.2,
+      "cv_gain": 0.0007403960130780682,
+      "positive_folds": 4,
+      "fold_gains": [
+        0.00026985000629623347,
+        0.0019943572760597688,
+        -0.0003342096013558255,
+        0.001648490010381237,
+        0.00012349237400892732
+      ],
+      "informative": true,
+      "evaluation": "development tuning score; no independent CI"
+    },
+    {
+      "candidate": "t_rf_leaf500",
+      "fraction": 0.3,
+      "cv_gain": 0.0010165834361502925,
+      "positive_folds": 5,
+      "fold_gains": [
+        0.0004261421576450473,
+        0.0011780427328221313,
+        0.0002325136507211976,
+        0.0014299345447584498,
+        0.0018162840948046364
+      ],
+      "informative": true,
+      "evaluation": "development tuning score; no independent CI"
+    },
+    {
+      "candidate": "t_rf_leaf500",
+      "fraction": 0.5,
+      "cv_gain": 0.0005231177076882484,
+      "positive_folds": 4,
+      "fold_gains": [
+        0.00032506964023264233,
+        0.0007577252961027058,
+        -0.0005837434481942849,
+        0.0008208129905186172,
+        0.0012957240597815617
+      ],
+      "informative": true,
+      "evaluation": "development tuning score; no independent CI"
+    },
+    {
+      "candidate": "s_lr_shared",
+      "fraction": 0.05,
+      "cv_gain": 0.00016379155593488327,
+      "positive_folds": 2,
+      "fold_gains": [
+        -0.0008614431939387546,
+        -0.00017737873717155197,
+        0.0012932959070563205,
+        0.0009726634631556795,
+        -0.00040817965942727705
+      ],
+      "informative": true,
+      "evaluation": "development tuning score; no independent CI"
+    },
+    {
+      "candidate": "s_lr_shared",
+      "fraction": 0.1,
+      "cv_gain": 0.0002739035859923078,
+      "positive_folds": 3,
+      "fold_gains": [
+        -0.0003884887533082041,
+        0.0007855388975262975,
+        0.0009961794638621657,
+        0.00048723842682844946,
+        -0.0005109501049471699
+      ],
+      "informative": true,
+      "evaluation": "development tuning score; no independent CI"
+    },
+    {
+      "candidate": "s_lr_shared",
+      "fraction": 0.2,
+      "cv_gain": 0.00029353005589774386,
+      "positive_folds": 3,
+      "fold_gains": [
+        -0.00025675191879843506,
+        0.00023155541965540408,
+        0.0014083167881214103,
+        0.0007313328014567383,
+        -0.0006468028109463985
+      ],
+      "informative": true,
+      "evaluation": "development tuning score; no independent CI"
+    },
+    {
+      "candidate": "s_lr_shared",
+      "fraction": 0.3,
+      "cv_gain": 0.00026270853423570196,
+      "positive_folds": 3,
+      "fold_gains": [
+        -0.0001992575911188218,
+        0.0003308587613822717,
+        0.0013621217942575902,
+        0.0008648016671058701,
+        -0.0010449819604484007
+      ],
+      "informative": true,
+      "evaluation": "development tuning score; no independent CI"
+    },
+    {
+      "candidate": "s_lr_shared",
+      "fraction": 0.5,
+      "cv_gain": 0.0009751687988882037,
+      "positive_folds": 5,
+      "fold_gains": [
+        0.001146192355466562,
+        0.0005028394213272207,
+        0.0011209676956591235,
+        0.0018534527013240043,
+        0.0002523918206641089
+      ],
+      "informative": true,
+      "evaluation": "development tuning score; no independent CI"
+    },
+    {
+      "candidate": "s_lr_shrink01",
+      "fraction": 0.05,
+      "cv_gain": 0.00016036181378016595,
+      "positive_folds": 3,
+      "fold_gains": [
+        -0.0008663024724771943,
+        8.977644414761493e-05,
+        0.0010015901853738334,
+        0.000995636500986072,
+        -0.000418891589129496
+      ],
+      "informative": true,
+      "evaluation": "development tuning score; no independent CI"
+    },
+    {
+      "candidate": "s_lr_shrink01",
+      "fraction": 0.1,
+      "cv_gain": 0.00035712576387487966,
+      "positive_folds": 3,
+      "fold_gains": [
+        -8.711126407207448e-05,
+        0.0008558093768561973,
+        0.0010382106495351632,
+        0.0005166958355009469,
+        -0.0005379757784458349
+      ],
+      "informative": true,
+      "evaluation": "development tuning score; no independent CI"
+    },
+    {
+      "candidate": "s_lr_shrink01",
+      "fraction": 0.2,
+      "cv_gain": 0.0003565318397686818,
+      "positive_folds": 3,
+      "fold_gains": [
+        -0.00025775477265995247,
+        0.00023817922200897908,
+        0.001722936534693734,
+        0.0007437557618694587,
+        -0.0006644575470688105
+      ],
+      "informative": true,
+      "evaluation": "development tuning score; no independent CI"
+    },
+    {
+      "candidate": "s_lr_shrink01",
+      "fraction": 0.3,
+      "cv_gain": 0.00025862707392289264,
+      "positive_folds": 3,
+      "fold_gains": [
+        -0.00024789230140455766,
+        0.00033409784169672203,
+        0.0010622067757446005,
+        0.0008814886830804393,
+        -0.0007367656295027407
+      ],
+      "informative": true,
+      "evaluation": "development tuning score; no independent CI"
+    },
+    {
+      "candidate": "s_lr_shrink01",
+      "fraction": 0.5,
+      "cv_gain": 0.0009822532351755663,
+      "positive_folds": 5,
+      "fold_gains": [
+        0.0011527179722182685,
+        0.0005104701170877292,
+        0.0011179615280311143,
+        0.001861133786319539,
+        0.0002689827722211808
+      ],
+      "informative": true,
+      "evaluation": "development tuning score; no independent CI"
+    },
+    {
+      "candidate": "s_lr_shrink05",
+      "fraction": 0.05,
+      "cv_gain": 0.00037726040769200345,
+      "positive_folds": 3,
+      "fold_gains": [
+        -4.982591321057393e-05,
+        -0.000510971880330144,
+        0.0004585189089921212,
+        0.0011262614941959738,
+        0.0008623194288126403
+      ],
+      "informative": true,
+      "evaluation": "development tuning score; no independent CI"
+    },
+    {
+      "candidate": "s_lr_shrink05",
+      "fraction": 0.1,
+      "cv_gain": 0.00011355907291872676,
+      "positive_folds": 3,
+      "fold_gains": [
+        -0.0007602296668743169,
+        0.00046359301235854094,
+        0.00035869869525895253,
+        0.0006352353812426,
+        -0.00012950205739214286
+      ],
+      "informative": true,
+      "evaluation": "development tuning score; no independent CI"
+    },
+    {
+      "candidate": "s_lr_shrink05",
+      "fraction": 0.2,
+      "cv_gain": 0.0006489711952681801,
+      "positive_folds": 4,
+      "fold_gains": [
+        -0.001135102024486773,
+        0.0003255763065209689,
+        0.002133107356983067,
+        0.0014588626838779755,
+        0.0004624116534456627
+      ],
+      "informative": true,
+      "evaluation": "development tuning score; no independent CI"
+    },
+    {
+      "candidate": "s_lr_shrink05",
+      "fraction": 0.3,
+      "cv_gain": 0.0009349736554590843,
+      "positive_folds": 4,
+      "fold_gains": [
+        -3.8792138185264416e-05,
+        0.0021395157217395065,
+        0.0014198997073299525,
+        0.0007482113592879105,
+        0.00040603362712331593
+      ],
+      "informative": true,
+      "evaluation": "development tuning score; no independent CI"
+    },
+    {
+      "candidate": "s_lr_shrink05",
+      "fraction": 0.5,
+      "cv_gain": 0.0007770613548358475,
+      "positive_folds": 4,
+      "fold_gains": [
+        0.0009027379653504921,
+        0.0005725148887356686,
+        0.0017415314534873663,
+        -7.792305570877596e-05,
+        0.0007464455223144866
+      ],
+      "informative": true,
+      "evaluation": "development tuning score; no independent CI"
+    },
+    {
+      "candidate": "s_lr_interact",
+      "fraction": 0.05,
+      "cv_gain": 0.00041938663506011945,
+      "positive_folds": 4,
+      "fold_gains": [
+        -3.8430124919043144e-05,
+        7.453152151633275e-05,
+        0.00046361503188220235,
+        0.0010974141787884646,
+        0.0004998025680326406
+      ],
+      "informative": true,
+      "evaluation": "development tuning score; no independent CI"
+    },
+    {
+      "candidate": "s_lr_interact",
+      "fraction": 0.1,
+      "cv_gain": 0.00019948007269978343,
+      "positive_folds": 3,
+      "fold_gains": [
+        -0.0010239548444930322,
+        0.0010314628909453881,
+        0.00033751377508281765,
+        0.0007115527227213246,
+        -5.9174180757580974e-05
+      ],
+      "informative": true,
+      "evaluation": "development tuning score; no independent CI"
+    },
+    {
+      "candidate": "s_lr_interact",
+      "fraction": 0.2,
+      "cv_gain": 0.0008540296936371731,
+      "positive_folds": 4,
+      "fold_gains": [
+        -0.000894235933698584,
+        0.0011686928473971766,
+        0.0021198703169980648,
+        0.0014273921970299596,
+        0.00044842904045924823
+      ],
+      "informative": true,
+      "evaluation": "development tuning score; no independent CI"
+    },
+    {
+      "candidate": "s_lr_interact",
+      "fraction": 0.3,
+      "cv_gain": 0.0010958890315827256,
+      "positive_folds": 4,
+      "fold_gains": [
+        -5.0932440732647514e-05,
+        0.002209920364699779,
+        0.001421434786127386,
+        0.0015290796512113485,
+        0.000369942796607763
+      ],
+      "informative": true,
+      "evaluation": "development tuning score; no independent CI"
+    },
+    {
+      "candidate": "s_lr_interact",
+      "fraction": 0.5,
+      "cv_gain": 0.000544175434457291,
+      "positive_folds": 4,
+      "fold_gains": [
+        0.0006022119514161381,
+        0.00021380800398816842,
+        0.0012193453268877657,
+        -5.071773251650218e-05,
+        0.0007362296225108853
+      ],
+      "informative": true,
+      "evaluation": "development tuning score; no independent CI"
+    },
+    {
+      "candidate": "s_hgb",
+      "fraction": 0.05,
+      "cv_gain": 8.215818885560186e-05,
+      "positive_folds": 3,
+      "fold_gains": [
+        -0.00012291116455468177,
+        0.0005358434592474956,
+        -0.0003462540631830362,
+        0.00015647096053823798,
+        0.00018764175222999368
+      ],
+      "informative": true,
+      "evaluation": "development tuning score; no independent CI"
+    },
+    {
+      "candidate": "s_hgb",
+      "fraction": 0.1,
+      "cv_gain": 0.000272412786361302,
+      "positive_folds": 4,
+      "fold_gains": [
+        -0.00017502150996132128,
+        0.0005287665384177895,
+        9.384013412671293e-05,
+        0.00039157771537605835,
+        0.0005229010538472706
+      ],
+      "informative": true,
+      "evaluation": "development tuning score; no independent CI"
+    },
+    {
+      "candidate": "s_hgb",
+      "fraction": 0.2,
+      "cv_gain": -2.0110507805441738e-05,
+      "positive_folds": 3,
+      "fold_gains": [
+        -0.001033985959061509,
+        0.0008407377001599004,
+        -0.00016861209388027804,
+        8.352338860580592e-05,
+        0.00017778442514887208
+      ],
+      "informative": true,
+      "evaluation": "development tuning score; no independent CI"
+    },
+    {
+      "candidate": "s_hgb",
+      "fraction": 0.3,
+      "cv_gain": 0.0005630167763316933,
+      "positive_folds": 3,
+      "fold_gains": [
+        -0.00027052315588145266,
+        0.00044516439508563745,
+        -0.00061743337209636,
+        0.0011797515301132833,
+        0.002078124484437358
+      ],
+      "informative": true,
+      "evaluation": "development tuning score; no independent CI"
+    },
+    {
+      "candidate": "s_hgb",
+      "fraction": 0.5,
+      "cv_gain": 0.0006490834844532651,
+      "positive_folds": 4,
+      "fold_gains": [
+        0.0003298548429097918,
+        -0.00011127540658792702,
+        0.00048312381504817887,
+        0.0010808881054026871,
+        0.0014628260654935951
+      ],
+      "informative": true,
+      "evaluation": "development tuning score; no independent CI"
+    },
+    {
+      "candidate": "x_hgb_leaf200",
+      "fraction": 0.05,
+      "cv_gain": 0.00044501042278779574,
+      "positive_folds": 3,
+      "fold_gains": [
+        -0.0003505379637828647,
+        0.0013937204879801534,
+        0.0008216979817380935,
+        -0.0005082378687390997,
+        0.0008684094767426959
+      ],
+      "informative": true,
+      "evaluation": "development tuning score; no independent CI"
+    },
+    {
+      "candidate": "x_hgb_leaf200",
+      "fraction": 0.1,
+      "cv_gain": 0.0005773468529509785,
+      "positive_folds": 4,
+      "fold_gains": [
+        -0.00010915576785420014,
+        0.0013626079644953625,
+        0.00031692536010176445,
+        0.00024150624366373546,
+        0.0010748504643482302
+      ],
+      "informative": true,
+      "evaluation": "development tuning score; no independent CI"
+    },
+    {
+      "candidate": "x_hgb_leaf200",
+      "fraction": 0.2,
+      "cv_gain": 0.0006746208336223813,
+      "positive_folds": 4,
+      "fold_gains": [
+        -0.00048103308222518506,
+        0.0005356403683425466,
+        0.0010692391191005272,
+        0.0005622722718440957,
+        0.0016869854910499219
+      ],
+      "informative": true,
+      "evaluation": "development tuning score; no independent CI"
+    },
+    {
+      "candidate": "x_hgb_leaf200",
+      "fraction": 0.3,
+      "cv_gain": 0.00028087069126832677,
+      "positive_folds": 3,
+      "fold_gains": [
+        0.00037923261804245724,
+        0.0010600100132749787,
+        -0.00022797971156871842,
+        0.00040925044549846874,
+        -0.00021615990890555211
+      ],
+      "informative": true,
+      "evaluation": "development tuning score; no independent CI"
+    },
+    {
+      "candidate": "x_hgb_leaf200",
+      "fraction": 0.5,
+      "cv_gain": 1.212401380047021e-05,
+      "positive_folds": 2,
+      "fold_gains": [
+        -0.0003098378989285466,
+        0.00013188870635292538,
+        -0.0005827957272245999,
+        -0.00022807530691615666,
+        0.0010494402957187288
+      ],
+      "informative": true,
+      "evaluation": "development tuning score; no independent CI"
+    },
+    {
+      "candidate": "x_hgb_leaf500",
+      "fraction": 0.05,
+      "cv_gain": 7.859438462848946e-05,
+      "positive_folds": 3,
+      "fold_gains": [
+        0.00045164961011316933,
+        0.0008725252085777086,
+        -0.00041174564856041575,
+        -0.0005248549244509597,
+        5.397677462944783e-06
+      ],
+      "informative": true,
+      "evaluation": "development tuning score; no independent CI"
+    },
+    {
+      "candidate": "x_hgb_leaf500",
+      "fraction": 0.1,
+      "cv_gain": 0.0005437759483336852,
+      "positive_folds": 5,
+      "fold_gains": [
+        0.00031726125150165376,
+        0.00088061477707473,
+        0.00010028469570446255,
+        0.0008776748361609826,
+        0.0005430441812265971
+      ],
+      "informative": true,
+      "evaluation": "development tuning score; no independent CI"
+    },
+    {
+      "candidate": "x_hgb_leaf500",
+      "fraction": 0.2,
+      "cv_gain": 0.0011223440565732653,
+      "positive_folds": 5,
+      "fold_gains": [
+        0.0006378253805398069,
+        0.0007635564634491467,
+        0.0003206610467422833,
+        0.0016592397838500535,
+        0.002230437608285036
+      ],
+      "informative": true,
+      "evaluation": "development tuning score; no independent CI"
+    },
+    {
+      "candidate": "x_hgb_leaf500",
+      "fraction": 0.3,
+      "cv_gain": 0.0007332691745745526,
+      "positive_folds": 4,
+      "fold_gains": [
+        0.0005612327624951762,
+        0.0007685213056807681,
+        -8.727551775645542e-05,
+        0.0018061084255571783,
+        0.0006177588968960962
+      ],
+      "informative": true,
+      "evaluation": "development tuning score; no independent CI"
+    },
+    {
+      "candidate": "x_hgb_leaf500",
+      "fraction": 0.5,
+      "cv_gain": 0.0005298297830771164,
+      "positive_folds": 3,
+      "fold_gains": [
+        -6.573562886955685e-05,
+        0.0003459209212400827,
+        -0.00027317316831330273,
+        0.0008530597511431533,
+        0.0017890770401852057
+      ],
+      "informative": true,
+      "evaluation": "development tuning score; no independent CI"
+    },
+    {
+      "candidate": "dr_ridge1",
+      "fraction": 0.05,
+      "cv_gain": 0.0006608554617938592,
+      "positive_folds": 5,
+      "fold_gains": [
+        0.0001784022267797028,
+        0.0014885844254288886,
+        0.0004701700896010102,
+        0.0007436763842742997,
+        0.00042344418288539496
+      ],
+      "informative": true,
+      "evaluation": "development tuning score; no independent CI"
+    },
+    {
+      "candidate": "dr_ridge1",
+      "fraction": 0.1,
+      "cv_gain": 0.00041154448199030906,
+      "positive_folds": 3,
+      "fold_gains": [
+        -0.00042487385806407605,
+        0.0015692295265644265,
+        0.00047235320090513336,
+        0.0008828845299669688,
+        -0.0004418709894209069
+      ],
+      "informative": true,
+      "evaluation": "development tuning score; no independent CI"
+    },
+    {
+      "candidate": "dr_ridge1",
+      "fraction": 0.2,
+      "cv_gain": 0.000891227221751313,
+      "positive_folds": 4,
+      "fold_gains": [
+        -0.0002578161034713639,
+        0.0012083713368631092,
+        0.0014114718930865531,
+        0.0013771593569031199,
+        0.0007169496253751465
+      ],
+      "informative": true,
+      "evaluation": "development tuning score; no independent CI"
+    },
+    {
+      "candidate": "dr_ridge1",
+      "fraction": 0.3,
+      "cv_gain": 0.0009893529582567,
+      "positive_folds": 4,
+      "fold_gains": [
+        -0.00025349417832704014,
+        0.0010631982008785417,
+        0.0023682287886133647,
+        0.0005700249815843306,
+        0.0011988069985343034
+      ],
+      "informative": true,
+      "evaluation": "development tuning score; no independent CI"
+    },
+    {
+      "candidate": "dr_ridge1",
+      "fraction": 0.5,
+      "cv_gain": 0.0006876084023377606,
+      "positive_folds": 5,
+      "fold_gains": [
+        0.0007253557949263347,
+        0.0005035042636982302,
+        0.0005778122266183228,
+        0.0006714887823961358,
+        0.0009598809440497795
+      ],
+      "informative": true,
+      "evaluation": "development tuning score; no independent CI"
+    },
+    {
+      "candidate": "dr_ridge100",
+      "fraction": 0.05,
+      "cv_gain": 0.0006097984404057795,
+      "positive_folds": 5,
+      "fold_gains": [
+        0.00019919697488568917,
+        0.000891505369002264,
+        0.00046680489360594485,
+        0.0007493482875749687,
+        0.0007421366769600311
+      ],
+      "informative": true,
+      "evaluation": "development tuning score; no independent CI"
+    },
+    {
+      "candidate": "dr_ridge100",
+      "fraction": 0.1,
+      "cv_gain": 0.0003611668456330736,
+      "positive_folds": 3,
+      "fold_gains": [
+        -0.00042843830740394383,
+        0.0013333620723185431,
+        0.00046022224331671973,
+        0.0008803368810238023,
+        -0.00043964866108975347
+      ],
+      "informative": true,
+      "evaluation": "development tuning score; no independent CI"
+    },
+    {
+      "candidate": "dr_ridge100",
+      "fraction": 0.2,
+      "cv_gain": 0.0008341020210504313,
+      "positive_folds": 4,
+      "fold_gains": [
+        -0.0005668898883034147,
+        0.0011784788192862035,
+        0.0014074416613275374,
+        0.0014018028021426658,
+        0.0007496767107991648
+      ],
+      "informative": true,
+      "evaluation": "development tuning score; no independent CI"
+    },
+    {
+      "candidate": "dr_ridge100",
+      "fraction": 0.3,
+      "cv_gain": 0.0009902266551824403,
+      "positive_folds": 4,
+      "fold_gains": [
+        -0.00024763388824072016,
+        0.0007631290428514005,
+        0.0023530426532432816,
+        0.0005830790360413196,
+        0.0014995164320169207
+      ],
+      "informative": true,
+      "evaluation": "development tuning score; no independent CI"
+    },
+    {
+      "candidate": "dr_ridge100",
+      "fraction": 0.5,
+      "cv_gain": 0.0007795570436243877,
+      "positive_folds": 5,
+      "fold_gains": [
+        0.0009687819492746369,
+        0.0004910864013006548,
+        0.0008406286054380212,
+        0.0006600387192110888,
+        0.0009372495428975364
+      ],
+      "informative": true,
+      "evaluation": "development tuning score; no independent CI"
+    },
+    {
+      "candidate": "dr_ridge1000",
+      "fraction": 0.05,
+      "cv_gain": 0.0003078916111595315,
+      "positive_folds": 4,
+      "fold_gains": [
+        -0.00031198255919190885,
+        0.0003497428330776477,
+        0.0004398893000932045,
+        0.0007856779576683139,
+        0.00027613052415039987
+      ],
+      "informative": true,
+      "evaluation": "development tuning score; no independent CI"
+    },
+    {
+      "candidate": "dr_ridge1000",
+      "fraction": 0.1,
+      "cv_gain": 0.000439142695136709,
+      "positive_folds": 3,
+      "fold_gains": [
+        -0.0003923546479257231,
+        0.0013453331208567055,
+        0.0006927399357064503,
+        0.000885927893916748,
+        -0.0003359328268706354
+      ],
+      "informative": true,
+      "evaluation": "development tuning score; no independent CI"
+    },
+    {
+      "candidate": "dr_ridge1000",
+      "fraction": 0.2,
+      "cv_gain": 0.0010964866222695725,
+      "positive_folds": 4,
+      "fold_gains": [
+        -0.0005597346889938751,
+        0.0014146879162320303,
+        0.0019296449993654477,
+        0.0016691840960136421,
+        0.0010286507887306176
+      ],
+      "informative": true,
+      "evaluation": "development tuning score; no independent CI"
+    },
+    {
+      "candidate": "dr_ridge1000",
+      "fraction": 0.3,
+      "cv_gain": 0.0011406512193461074,
+      "positive_folds": 4,
+      "fold_gains": [
+        -5.4591002940466135e-05,
+        0.001029289861163786,
+        0.0023712690600470815,
+        0.0009031366743505827,
+        0.001454151504109552
+      ],
+      "informative": true,
+      "evaluation": "development tuning score; no independent CI"
+    },
+    {
+      "candidate": "dr_ridge1000",
+      "fraction": 0.5,
+      "cv_gain": 0.0008342681967120058,
+      "positive_folds": 5,
+      "fold_gains": [
+        0.0009252202356506468,
+        0.00018258844127909095,
+        0.0014061442855561302,
+        0.0004061678226763567,
+        0.001251220198397804
+      ],
+      "informative": true,
+      "evaluation": "development tuning score; no independent CI"
+    },
+    {
+      "candidate": "dr_hgb_leaf500",
+      "fraction": 0.05,
+      "cv_gain": 0.0004896536611643053,
+      "positive_folds": 3,
+      "fold_gains": [
+        -0.00011335453345056595,
+        0.0013724894987682467,
+        0.000292460896507034,
+        -0.0001997836892187922,
+        0.0010964561332156041
+      ],
+      "informative": true,
+      "evaluation": "development tuning score; no independent CI"
+    },
+    {
+      "candidate": "dr_hgb_leaf500",
+      "fraction": 0.1,
+      "cv_gain": 0.00044089289623143636,
+      "positive_folds": 3,
+      "fold_gains": [
+        -0.000527196147262399,
+        0.0011567342792046472,
+        -0.0005533516972906562,
+        0.0011123736431313772,
+        0.0010159044033742127
+      ],
+      "informative": true,
+      "evaluation": "development tuning score; no independent CI"
+    },
+    {
+      "candidate": "dr_hgb_leaf500",
+      "fraction": 0.2,
+      "cv_gain": 0.0006593046458555095,
+      "positive_folds": 4,
+      "fold_gains": [
+        -0.00020642336236843125,
+        0.0008452697949094262,
+        0.00040615492947561446,
+        0.002146335132526759,
+        0.00010518673473417861
+      ],
+      "informative": true,
+      "evaluation": "development tuning score; no independent CI"
+    },
+    {
+      "candidate": "dr_hgb_leaf500",
+      "fraction": 0.3,
+      "cv_gain": 0.0006337951245576904,
+      "positive_folds": 4,
+      "fold_gains": [
+        0.000492656016669713,
+        0.0008095608651347251,
+        -0.0005816310049701797,
+        0.0008811349031181102,
+        0.0015672548428360832
+      ],
+      "informative": true,
+      "evaluation": "development tuning score; no independent CI"
+    },
+    {
+      "candidate": "dr_hgb_leaf500",
+      "fraction": 0.5,
+      "cv_gain": -8.928620002757954e-05,
+      "positive_folds": 2,
+      "fold_gains": [
+        -0.00011009085833716141,
+        0.0008798129411027883,
+        -0.0010991050786439346,
+        -0.0002854124835487691,
+        0.00016836447928917923
+      ],
+      "informative": true,
+      "evaluation": "development tuning score; no independent CI"
+    },
+    {
+      "candidate": "dr_hgb_leaf1000",
+      "fraction": 0.05,
+      "cv_gain": 0.00021737680442539636,
+      "positive_folds": 3,
+      "fold_gains": [
+        -0.00033862335688366886,
+        0.0007810752131451834,
+        -0.0003398094725478566,
+        6.334031111776321e-05,
+        0.0009209013272955606
+      ],
+      "informative": true,
+      "evaluation": "development tuning score; no independent CI"
+    },
+    {
+      "candidate": "dr_hgb_leaf1000",
+      "fraction": 0.1,
+      "cv_gain": 0.0004019445069251288,
+      "positive_folds": 4,
+      "fold_gains": [
+        0.00042272905034114065,
+        0.0008955997093726448,
+        -0.0009858736601145372,
+        0.0008471801097670815,
+        0.0008300873252593144
+      ],
+      "informative": true,
+      "evaluation": "development tuning score; no independent CI"
+    },
+    {
+      "candidate": "dr_hgb_leaf1000",
+      "fraction": 0.2,
+      "cv_gain": 0.0006740045744302297,
+      "positive_folds": 3,
+      "fold_gains": [
+        0.0003129297217740211,
+        -0.00013969321745772208,
+        -0.00033019260187742587,
+        0.0026970157656316857,
+        0.00082996320408059
+      ],
+      "informative": true,
+      "evaluation": "development tuning score; no independent CI"
+    },
+    {
+      "candidate": "dr_hgb_leaf1000",
+      "fraction": 0.3,
+      "cv_gain": 0.00022893363291025617,
+      "positive_folds": 3,
+      "fold_gains": [
+        -0.0007123638129578413,
+        -0.00041663859914143426,
+        0.000524923885523088,
+        0.0013820456238589692,
+        0.00036670106726849935
+      ],
+      "informative": true,
+      "evaluation": "development tuning score; no independent CI"
+    },
+    {
+      "candidate": "dr_hgb_leaf1000",
+      "fraction": 0.5,
+      "cv_gain": 0.0003228284340490575,
+      "positive_folds": 3,
+      "fold_gains": [
+        -0.0002850291074403615,
+        0.0015061574374866469,
+        -0.0011471104605313299,
+        0.0005946669743354466,
+        0.0009454573263948852
+      ],
+      "informative": true,
+      "evaluation": "development tuning score; no independent CI"
+    },
+    {
+      "candidate": "dr_forest",
+      "fraction": 0.05,
+      "cv_gain": 0.00044235232645863657,
+      "positive_folds": 4,
+      "fold_gains": [
+        0.0001716400426434092,
+        0.0010922095067072714,
+        -0.00034028364733247466,
+        0.0004303858746504241,
+        0.0008578098556245525
+      ],
+      "informative": true,
+      "evaluation": "development tuning score; no independent CI"
+    },
+    {
+      "candidate": "dr_forest",
+      "fraction": 0.1,
+      "cv_gain": 0.00012423804848643209,
+      "positive_folds": 3,
+      "fold_gains": [
+        -0.00047295746703898407,
+        0.0008045404475017704,
+        -0.0014542734147682498,
+        0.0006269246936304945,
+        0.0011169559831071293
+      ],
+      "informative": true,
+      "evaluation": "development tuning score; no independent CI"
+    },
+    {
+      "candidate": "dr_forest",
+      "fraction": 0.2,
+      "cv_gain": 0.0002690040554143656,
+      "positive_folds": 4,
+      "fold_gains": [
+        -0.0004111277064307858,
+        0.0007702254734414363,
+        0.00022001595768181474,
+        0.00017925259016365723,
+        0.0005866539622157054
+      ],
+      "informative": true,
+      "evaluation": "development tuning score; no independent CI"
+    },
+    {
+      "candidate": "dr_forest",
+      "fraction": 0.3,
+      "cv_gain": 0.0008718930336983333,
+      "positive_folds": 4,
+      "fold_gains": [
+        0.0007999519176148043,
+        0.0010959451645023235,
+        -0.0001080075209870884,
+        0.0018273856103915398,
+        0.0007441899969700868
+      ],
+      "informative": true,
+      "evaluation": "development tuning score; no independent CI"
+    },
+    {
+      "candidate": "dr_forest",
+      "fraction": 0.5,
+      "cv_gain": 0.00026070693528989076,
+      "positive_folds": 3,
+      "fold_gains": [
+        -0.0002655869641538311,
+        0.0003470006285188697,
+        -0.000978158380370788,
+        0.0005896643451716918,
+        0.0016106150472835114
+      ],
+      "informative": true,
+      "evaluation": "development tuning score; no independent CI"
+    },
+    {
+      "candidate": "dr_stump",
+      "fraction": 0.05,
+      "cv_gain": -0.0001673450892189591,
+      "positive_folds": 2,
+      "fold_gains": [
+        0.00020234312305645138,
+        -0.00032775529920941397,
+        -0.000404486449582114,
+        0.0002800557064564169,
+        -0.0005868825268161357
+      ],
+      "informative": true,
+      "evaluation": "development tuning score; no independent CI"
+    },
+    {
+      "candidate": "dr_stump",
+      "fraction": 0.1,
+      "cv_gain": 0.00010381366805642929,
+      "positive_folds": 3,
+      "fold_gains": [
+        0.0011466372604587757,
+        1.3692058853683451e-05,
+        -0.0007800340953695413,
+        -6.547485876158054e-05,
+        0.0002042479751008093
+      ],
+      "informative": true,
+      "evaluation": "development tuning score; no independent CI"
+    },
+    {
+      "candidate": "dr_stump",
+      "fraction": 0.2,
+      "cv_gain": 0.00061261922207072,
+      "positive_folds": 3,
+      "fold_gains": [
+        -3.99316293625773e-05,
+        0.0008618466382469837,
+        -0.0005230121024051266,
+        0.0015533925484437397,
+        0.0012108006554305804
+      ],
+      "informative": true,
+      "evaluation": "development tuning score; no independent CI"
+    },
+    {
+      "candidate": "dr_stump",
+      "fraction": 0.3,
+      "cv_gain": 0.0009156210193725441,
+      "positive_folds": 4,
+      "fold_gains": [
+        0.0009939223327486823,
+        0.0012519920994047853,
+        -7.358238110776167e-05,
+        0.0015850853087596654,
+        0.0008206877370573487
+      ],
+      "informative": true,
+      "evaluation": "development tuning score; no independent CI"
+    },
+    {
+      "candidate": "dr_stump",
+      "fraction": 0.5,
+      "cv_gain": 0.0007113698685279366,
+      "positive_folds": 4,
+      "fold_gains": [
+        -5.8701606847286797e-05,
+        0.00047942449301773194,
+        0.0023822358613974476,
+        0.00042530898596646337,
+        0.0003285816091053274
+      ],
+      "informative": true,
+      "evaluation": "development tuning score; no independent CI"
+    },
+    {
+      "candidate": "dr_tree2",
+      "fraction": 0.05,
+      "cv_gain": 0.0007643715604118143,
+      "positive_folds": 5,
+      "fold_gains": [
+        0.0001316276925718069,
+        0.0002796146878109512,
+        0.0009276961160820383,
+        0.0012586668264464116,
+        0.0012242524791478636
+      ],
+      "informative": true,
+      "evaluation": "development tuning score; no independent CI"
+    },
+    {
+      "candidate": "dr_tree2",
+      "fraction": 0.1,
+      "cv_gain": 0.0005977187645378012,
+      "positive_folds": 5,
+      "fold_gains": [
+        0.0007196936697608454,
+        0.00023013142063754791,
+        0.0002163463054891795,
+        0.0015340584061030987,
+        0.0002883640206983349
+      ],
+      "informative": true,
+      "evaluation": "development tuning score; no independent CI"
+    },
+    {
+      "candidate": "dr_tree2",
+      "fraction": 0.2,
+      "cv_gain": 0.0009313704761819071,
+      "positive_folds": 4,
+      "fold_gains": [
+        0.000739465624153905,
+        0.0004891710797557703,
+        -0.0001481554125691785,
+        0.0014713588674649426,
+        0.0021050122221040963
+      ],
+      "informative": true,
+      "evaluation": "development tuning score; no independent CI"
+    },
+    {
+      "candidate": "dr_tree2",
+      "fraction": 0.3,
+      "cv_gain": 0.0011201809064171392,
+      "positive_folds": 4,
+      "fold_gains": [
+        0.0012721008997301213,
+        0.001483807219658773,
+        -0.0006281071318274701,
+        0.0018255658484972865,
+        0.0016475376960269855
+      ],
+      "informative": true,
+      "evaluation": "development tuning score; no independent CI"
+    },
+    {
+      "candidate": "dr_tree2",
+      "fraction": 0.5,
+      "cv_gain": 0.0007541566579182852,
+      "positive_folds": 4,
+      "fold_gains": [
+        -0.0001325183884473392,
+        0.0007344762066721211,
+        0.0021024077716428136,
+        0.00044898994147626826,
+        0.0006174277582475621
+      ],
+      "informative": true,
+      "evaluation": "development tuning score; no independent CI"
+    },
+    {
+      "candidate": "purchase_probability",
+      "fraction": 0.05,
+      "fold_gains": [
+        -0.0008516173089561442,
+        -0.00015861113499364996,
+        0.0010046583178459116,
+        0.000983497279783445,
+        -0.0004184560012634163
+      ],
+      "cv_gain": 0.00011189423048322918,
+      "positive_folds": 2,
+      "informative": true,
+      "evaluation": "development tuning score, ordinary purchase baseline"
+    },
+    {
+      "candidate": "purchase_probability",
+      "fraction": 0.1,
+      "fold_gains": [
+        -0.0003554797412431724,
+        0.000511267274745202,
+        0.0012956405567474375,
+        0.0004988992378348687,
+        -0.0005074320183295103
+      ],
+      "cv_gain": 0.0002885790619509651,
+      "positive_folds": 3,
+      "informative": true,
+      "evaluation": "development tuning score, ordinary purchase baseline"
+    },
+    {
+      "candidate": "purchase_probability",
+      "fraction": 0.2,
+      "fold_gains": [
+        -0.00024029930837187678,
+        0.0005007748372509827,
+        0.0017053526224411633,
+        0.0007492549861304601,
+        -0.0006327694101165819
+      ],
+      "cv_gain": 0.00041646274546682947,
+      "positive_folds": 3,
+      "informative": true,
+      "evaluation": "development tuning score, ordinary purchase baseline"
+    },
+    {
+      "candidate": "purchase_probability",
+      "fraction": 0.3,
+      "fold_gains": [
+        -0.0005318641686052838,
+        0.0009168567056677423,
+        0.0013589194563631655,
+        0.001191546765134412,
+        -0.0010363910741134467
+      ],
+      "cv_gain": 0.0003798135368893179,
+      "positive_folds": 3,
+      "informative": true,
+      "evaluation": "development tuning score, ordinary purchase baseline"
+    },
+    {
+      "candidate": "purchase_probability",
+      "fraction": 0.5,
+      "fold_gains": [
+        0.0011453651411423554,
+        0.0005078330631286911,
+        0.0011197388733274632,
+        0.0015628780545943277,
+        0.0002419868936356177
+      ],
+      "cv_gain": 0.000915560405165691,
+      "positive_folds": 5,
+      "informative": true,
+      "evaluation": "development tuning score, ordinary purchase baseline"
+    }
+  ],
+  "shortlist": [
+    {
+      "candidate": "dr_ridge1000",
+      "fraction": 0.3,
+      "cv_gain": 0.0011406512193461074,
+      "positive_folds": 4,
+      "fold_gains": [
+        -5.4591002940466135e-05,
+        0.001029289861163786,
+        0.0023712690600470815,
+        0.0009031366743505827,
+        0.001454151504109552
+      ],
+      "informative": true,
+      "evaluation": "development tuning score; no independent CI",
+      "gain": -0.002094220803265705,
+      "ci_low": -0.003934723591059336,
+      "ci_high": 3.395096557783897e-05,
+      "simultaneous_ci_low": -0.005459204609347191,
+      "simultaneous_ci_high": 0.0012707630028157804,
+      "bootstrap_sd": 0.0010272510674941568,
+      "policy_value": -0.0002205957411869028,
+      "policy_ci_low": -0.0026047055760717035,
+      "policy_ci_high": 0.002568389629252927,
+      "n_selected": 2557,
+      "events_t": 15,
+      "events_c": 15,
+      "boundary_tie_n": 1,
+      "selected_from_tie": 1
+    },
+    {
+      "candidate": "x_hgb_leaf500",
+      "fraction": 0.2,
+      "cv_gain": 0.0011223440565732653,
+      "positive_folds": 5,
+      "fold_gains": [
+        0.0006378253805398069,
+        0.0007635564634491467,
+        0.0003206610467422833,
+        0.0016592397838500535,
+        0.002230437608285036
+      ],
+      "informative": true,
+      "evaluation": "development tuning score; no independent CI",
+      "gain": -0.0006599172083508074,
+      "ci_low": -0.002267088330681173,
+      "ci_high": 0.001077405602502827,
+      "simultaneous_ci_low": -0.0034399015346752186,
+      "simultaneous_ci_high": 0.0021200671179736038,
+      "bootstrap_sd": 0.0008486643714815612,
+      "policy_value": 0.0005894104141929387,
+      "policy_ci_low": -0.0012894986930615743,
+      "policy_ci_high": 0.002590550302031016,
+      "n_selected": 1705,
+      "events_t": 10,
+      "events_c": 7,
+      "boundary_tie_n": 6,
+      "selected_from_tie": 4
+    },
+    {
+      "candidate": "dr_tree2",
+      "fraction": 0.3,
+      "cv_gain": 0.0011201809064171392,
+      "positive_folds": 4,
+      "fold_gains": [
+        0.0012721008997301213,
+        0.001483807219658773,
+        -0.0006281071318274701,
+        0.0018255658484972865,
+        0.0016475376960269855
+      ],
+      "informative": true,
+      "evaluation": "development tuning score; no independent CI",
+      "gain": 0.00048060534489561044,
+      "ci_low": -0.0014288228314594772,
+      "ci_high": 0.0025265943837673777,
+      "simultaneous_ci_low": -0.002893855976090262,
+      "simultaneous_ci_high": 0.003855066665881483,
+      "bootstrap_sd": 0.0010301443317307121,
+      "policy_value": 0.002354230406974412,
+      "policy_ci_low": -0.00013327737319980684,
+      "policy_ci_high": 0.00505203915099779,
+      "n_selected": 2557,
+      "events_t": 21,
+      "events_c": 10,
+      "boundary_tie_n": 2791,
+      "selected_from_tie": 2089
+    }
+  ],
+  "best_fixed10": {
+    "candidate": "dr_tree2",
+    "fraction": 0.1,
+    "cv_gain": 0.0005977187645378012,
+    "positive_folds": 5,
+    "fold_gains": [
+      0.0007196936697608454,
+      0.00023013142063754791,
+      0.0002163463054891795,
+      0.0015340584061030987,
+      0.0002883640206983349
+    ],
+    "informative": true,
+    "evaluation": "development tuning score; no independent CI",
+    "gain": 0.0001256584682943088,
+    "ci_low": -0.0012605683958407806,
+    "ci_high": 0.0015315362845573055,
+    "simultaneous_ci_low": -0.002189810820468567,
+    "simultaneous_ci_high": 0.002441127757057185,
+    "bootstrap_sd": 0.0007068587653625106,
+    "policy_value": 0.0007499559078293659,
+    "policy_ci_low": -0.0006951805973550086,
+    "policy_ci_high": 0.0022151356945969793,
+    "n_selected": 852,
+    "events_t": 7,
+    "events_c": 4,
+    "boundary_tie_n": 2791,
+    "selected_from_tie": 384
+  }
+}

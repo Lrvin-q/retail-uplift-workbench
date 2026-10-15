@@ -1,0 +1,22 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1000 350" role="img" aria-label="Synthetic offline demo, not real business results">
+<rect width="1000" height="350" rx="18" fill="#f1f5fa"/>
+<text x="35" y="55" font-size="27" font-family="sans-serif" fill="#16324f">Offline marketing experiment demo</text>
+<text x="35" y="88" font-size="17" font-family="sans-serif" fill="#9a5415">SYNTHETIC DATA · No API · No PostgreSQL · Not a business result</text>
+<g font-family="sans-serif" fill="#16324f">
+<rect x="30" y="115" width="295" height="172" rx="12" fill="white"/>
+<text x="50" y="148" font-size="17">1. Customer-grain SQL</text>
+<text x="50" y="195" font-size="32">2,000 assigned</text>
+<text x="50" y="225" font-size="16">596 item lines → 298 buyers</text>
+<text x="50" y="255" font-size="16">SQL / Python: matched</text>
+<rect x="350" y="115" width="295" height="172" rx="12" fill="white"/>
+<text x="370" y="148" font-size="17">2. Experiment analysis</text>
+<text x="370" y="195" font-size="32">11.89 pp</text>
+<text x="370" y="225" font-size="16">ITT purchase-rate difference</text>
+<text x="370" y="255" font-size="16">All assigned customers retained</text>
+<rect x="670" y="115" width="295" height="172" rx="12" fill="white"/>
+<text x="690" y="148" font-size="17">3. Modeling and workflow</text>
+<text x="690" y="193" font-size="25">Train / Valid / Test</text>
+<text x="690" y="225" font-size="19">1200 / 400 / 400</text>
+<text x="690" y="255" font-size="16">Answer · Clarify · Refuse</text>
+<text x="35" y="325" font-size="15">Generated from examples/sample-output/result.json · 42 public offline tests passed</text>
+</g></svg>
