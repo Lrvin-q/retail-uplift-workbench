@@ -143,4 +143,9 @@ def main(argv=None):
 
 
 if __name__ == "__main__":
+    # Emit a consistent encoding when Windows redirects output through cp1252.
+    import sys
+    for stream in (sys.stdout, sys.stderr):
+        if hasattr(stream, "reconfigure"):
+            stream.reconfigure(encoding="utf-8")
     raise SystemExit(main())

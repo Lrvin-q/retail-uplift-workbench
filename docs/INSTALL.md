@@ -32,7 +32,7 @@ macOS / Linux：
 
 ## 冻结研究与成本情景
 
-基础安装即可在任意目录运行 `python -m dsa.research_portal --study starbucks --json`，或用 `--ledger` 查看探索账本。无需下载原始数据或配置 API；输出为保存好的证据及假设经济条件。
+研究命令统一输出 UTF-8；重定向或在程序中读取时请按 UTF-8 解码。基础安装即可在任意目录运行 `python -m dsa.research_portal --study starbucks --json`，或用 `--ledger` 查看探索账本。无需下载原始数据或配置 API；输出为保存好的证据及假设经济条件。
 
 只看研究页面可安装 `python -m pip install ".[ui]"`，运行 `python -m streamlit run src/dsa/agent/workbench.py`，侧栏选择“研究证据与业务决策”。这个工作区不初始化数据库或模型；切回实验分析则需要完整服务。`[ui]` 只保证研究页面，不承诺完整产品依赖齐全。
 
