@@ -5,7 +5,7 @@
 **两条设计约束**：
 1. **import 时不连数据库** —— Streamlit 会反复重跑脚本，
    在 import 期建立连接会让页面无法加载（惰性初始化，见 `_ensure()`）。
-2. **顶部必须显示当前模型模式** —— 蓝图验收条件规定
+2. **实验分析顶部必须显示当前模型模式** —— 蓝图验收条件规定
    「没有真实模型调用证据时，版本只能标记为 mock 演示」，
    所以 mock 状态必须显眼且不可忽略。
 """
@@ -59,7 +59,7 @@ UNIMPLEMENTED: tuple[tuple[str, str], ...] = (
      "独立模块**已实现**（`src/dsa/nl2sql/`，109 条测试），"
      "但**尚未接入本页面**；页面上的问题走的是规则计划 + 受限工具路径"),
     ("按日期/按小时的效果曲线", "第一版不支持动态时间窗口与实时刷新"),
-    ("净收益 / ROI / ROAS", "没有成本数据，无法计算"),
+    ("已实现的净收益 / ROI / ROAS", "缺少真实成本，不能报告已实现收益；研究工作区提供单独标注的成本情景"),
     ("RetailHero 的因果结论", "该数据集的随机化机制无文档，仅开放数据工程与描述性功能"),
     ("LangGraph 原生中断恢复", "澄清可多轮补充；当前使用带记录重跑"),
     ("客户级预测区间", "**刻意不提供**——回顾性模型分数不足以支撑客户级不确定性"),
@@ -334,6 +334,11 @@ def _render_result(state: dict, cp: Any, tid: str) -> None:
 def main() -> None:
     st.set_page_config(page_title="零售营销增量决策助手", page_icon="📊", layout="wide")
     st.title("零售营销增量决策助手")
+    view = st.sidebar.radio("工作区", ["实验分析", "研究证据与业务决策"], key="workbench_view")
+    if view == "研究证据与业务决策":
+        from dsa.agent.research_panel import render_research_panel
+        render_research_panel()
+        return
     mode_banner()
 
     with st.sidebar:
@@ -351,7 +356,7 @@ def main() -> None:
         st.caption(
             "本工具输出为**回顾性分析**，不构成对下一轮投放效果的承诺。"
         )
-        st.caption("没有成本数据，因此不提供净收益/投资回报类结论。")
+        st.caption("实验分析没有真实成本数据；成本假设请在研究工作区查看，不能视为实际收益。")
         st.divider()
         capability_notice()
 

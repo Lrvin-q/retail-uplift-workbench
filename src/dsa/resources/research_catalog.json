@@ -1,0 +1,179 @@
+{
+  "schema_version": 1,
+  "as_of": "2026-10-16",
+  "repository": "https://github.com/Lrvin-q/retail-uplift-workbench",
+  "mode": "frozen_aggregate_read_only",
+  "scope": "冻结汇总、假设成本决策、探索披露；不执行训练、原始数据读取或客户名单生成",
+  "studies": [
+    {
+      "id": "hillstrom",
+      "label": "Hillstrom：平均效果与失败诊断",
+      "evidence_level": "historical_exploratory",
+      "product_support": "现有数据库分析工作流；扩展研究只读展示",
+      "summary": "男装邮件平均购买效果为正；既定扩展选人比较未确认优于随机。主比较为历史观察后选择，旧测试集被查看。",
+      "policies": [],
+      "overall_itt": {
+        "n_t": 21307,
+        "n_c": 21306,
+        "events_t": 267,
+        "events_c": 122,
+        "estimate": 0.006805006519615695,
+        "ci_low": 0.005014344671481532,
+        "ci_high": 0.008640723396917826,
+        "method": "Newcombe; historical outcome-informed comparison, not prospective registration"
+      },
+      "executed_comparisons": 110,
+      "source": {
+        "path": "reports/evidence/hillstrom/mens_exploration_results.json",
+        "sha256": "892414e0088a96631038f295040cd5d1054e2c55b205d9d9043289f8eb7d7a53",
+        "scope": "source file bytes at 2026-10-16; not an external audit"
+      }
+    },
+    {
+      "id": "retailhero",
+      "label": "RetailHero：交易工程与数据资格",
+      "evidence_level": "data_engineering_only",
+      "product_support": "交易去重、特征与只读工程核对；不开放因果结论",
+      "summary": "沟通前历史与购买标签已说明；随机分配、窗口、发布选择与活动时间证据仍不足，不用工程完成代替因果验证。",
+      "policies": [],
+      "source": {
+        "path": "reports/evidence/retailhero/qualification_decision.json",
+        "sha256": "aec0c1dcca07446d4bd1f0712d1ab279222b40723d5c0bd27122ff40a97af3f1",
+        "scope": "source file bytes at 2026-10-16; not an external audit"
+      }
+    },
+    {
+      "id": "criteo",
+      "label": "Criteo：大规模发布基准评分",
+      "evidence_level": "released_benchmark_score_only",
+      "product_support": "独立研究汇总；未接入实时训练",
+      "summary": "普通购买预测在发布基准取得正评分。结果相关发布抽样与原始区组缺口仍在，不能称真实因果购买收益。",
+      "policies": [],
+      "executed_comparisons": 35,
+      "source": {
+        "path": "reports/evidence/criteo/test_results.json",
+        "sha256": "025e68cefe14d0b45019306185ae2f7ec4d2a8ca540a39c2034974befbbeecce",
+        "scope": "source file bytes at 2026-10-16; not an external audit"
+      }
+    },
+    {
+      "id": "starbucks",
+      "label": "Starbucks：冻结策略购买增量",
+      "evidence_level": "single_study_frozen_holdout",
+      "product_support": "产品只读研究入口：展示冻结证据与成本情景，不训练、不重新评价",
+      "summary": "公开随机促销练习内，冻结策略优于同预算随机；没有证据证明专门方法优于购买预测。匿名特征不支持周期/活跃业务机制。",
+      "policies": [
+        {
+          "id": "shared_s005",
+          "label": "冻结共享交互模型",
+          "role": "primary_frozen",
+          "fraction": 0.1,
+          "value_vs_none": {
+            "estimate": 0.0018972751581037529,
+            "ci_low": 0.0011533361423669856,
+            "ci_high": 0.0026685175500198513,
+            "bootstrap_se": 0.0003948790877657317,
+            "n_bootstrap": 2000,
+            "alpha": 0.05,
+            "p_normal": 1.5498448568030368e-06
+          },
+          "gain_vs_random": {
+            "estimate": 0.0009364892610474543,
+            "ci_low": 0.00025645171395091866,
+            "ci_high": 0.0016494601480725735,
+            "bootstrap_se": 0.0003707906757157281,
+            "n_bootstrap": 2000,
+            "alpha": 0.05,
+            "p_normal": 0.011548288208386034
+          }
+        },
+        {
+          "id": "purchase",
+          "label": "普通购买预测参照",
+          "role": "prespecified_reference",
+          "fraction": 0.1,
+          "value_vs_none": {
+            "estimate": 0.0025807690671463238,
+            "ci_low": 0.001762917895156853,
+            "ci_high": 0.0034813901361977853,
+            "bootstrap_se": 0.00044219048552292955,
+            "n_bootstrap": 2000,
+            "alpha": 0.05,
+            "p_normal": 5.336353842582397e-09
+          },
+          "gain_vs_random": {
+            "estimate": 0.0016199831700900247,
+            "ci_low": 0.000837605607089918,
+            "ci_high": 0.002461592223884869,
+            "bootstrap_se": 0.00041099043668649433,
+            "n_bootstrap": 2000,
+            "alpha": 0.05,
+            "p_normal": 8.092077318185275e-05
+          }
+        },
+        {
+          "id": "policy_depth1",
+          "label": "单分裂响应规则参照",
+          "role": "prespecified_reference",
+          "fraction": 0.1,
+          "value_vs_none": {
+            "estimate": 0.0014727633210345318,
+            "ci_low": 0.0007760420973886491,
+            "ci_high": 0.0021949599793054707,
+            "bootstrap_se": 0.0003633088402037935,
+            "n_bootstrap": 2000,
+            "alpha": 0.05,
+            "p_normal": 5.040301539914152e-05
+          },
+          "gain_vs_random": {
+            "estimate": 0.0005119774239782333,
+            "ci_low": -0.0001573310729088149,
+            "ci_high": 0.0012024014745911301,
+            "bootstrap_se": 0.00034112537021833376,
+            "n_bootstrap": 2000,
+            "alpha": 0.05,
+            "p_normal": 0.13339480882349278
+          }
+        }
+      ],
+      "source": {
+        "path": "reports/evidence/starbucks/holdout_first_result.json",
+        "sha256": "00e620e5e96e0d16d7c243589ac9fbcc9cd836bb011f6f5fee98535b964e6458",
+        "scope": "source file bytes at 2026-10-16; not an external audit"
+      },
+      "primary_policy": "shared_s005",
+      "n_holdout": 41650,
+      "secondary": [
+        {
+          "comparison": "shared_s005 minus purchase",
+          "reference": "purchase",
+          "estimate": -0.0006834939090425705,
+          "ci_low": -0.001645883719514201,
+          "ci_high": 0.00023893021701535308,
+          "bootstrap_se": 0.0004111485949226596,
+          "n_bootstrap": 2000,
+          "alpha": 0.025,
+          "p_normal": 0.0964323626308661,
+          "p_holm": 0.1928647252617322
+        },
+        {
+          "comparison": "shared_s005 minus policy_depth1",
+          "reference": "policy_depth1",
+          "estimate": 0.00042451183706922093,
+          "ci_low": -0.0007906333102002594,
+          "ci_high": 0.0016042084452418815,
+          "bootstrap_se": 0.0005270941241611196,
+          "n_bootstrap": 2000,
+          "alpha": 0.025,
+          "p_normal": 0.42059958517457585,
+          "p_holm": 0.42059958517457585
+        }
+      ],
+      "assumptions": [
+        "随机实验解释来自官方练习及文献，企业原始发布与送达未独立核验。",
+        "成本、毛利、维护费是用户输入情景，不是真实利润。",
+        "该区间是本轮固定评分规则的评价区间，不覆盖完整训练选择或跨项目持续探索。"
+      ]
+    }
+  ]
+}

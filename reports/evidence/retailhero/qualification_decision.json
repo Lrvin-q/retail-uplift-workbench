@@ -1,0 +1,79 @@
+{
+  "date": "2026-10-15",
+  "status": "data_qualification_gate_not_passed",
+  "phase_status": {
+    "business_and_dataset_audit": "completed",
+    "mechanism_validation_and_training": "not_started",
+    "final_holdout_evaluation": "not_started",
+    "stage_1_reporting": "completed"
+  },
+  "selected_dataset": null,
+  "training_permitted": false,
+  "new_model_runs": 0,
+  "new_split_manifests": 0,
+  "alternatives_reviewed": 2,
+  "candidates": [
+    {
+      "dataset": "RetailHero",
+      "decision": "not_qualified_pending_design_evidence",
+      "purchase_label": "documented",
+      "pre_campaign_transactions": "documented",
+      "random_assignment": "unverified",
+      "assignment_vs_delivery": "unresolved",
+      "outcome_window": "unverified",
+      "release_selection": "unverified",
+      "campaign_timestamp": "unverified",
+      "cluster_repetition_design": "unverified",
+      "source_ids": [
+        "S01",
+        "S02",
+        "S09",
+        "S05",
+        "S06",
+        "S10"
+      ],
+      "use_and_redistribution": "full scope not established from audited materials; no publication"
+    },
+    {
+      "dataset": "Lenta / BigTarget",
+      "decision": "outcome_mismatch",
+      "documented_outcome": "store visit",
+      "purchase_endpoint": "not established",
+      "source_ids": [
+        "S03"
+      ],
+      "use_and_redistribution": "not fully audited after endpoint mismatch"
+    },
+    {
+      "dataset": "Starbucks / Udacity",
+      "decision": "not_suitable_for_current_mechanism_hypotheses",
+      "randomized_promotion_and_purchase": "supported by official exercise and mirrored instructions",
+      "features": "anonymous V1-V7; interpretable purchase history unavailable",
+      "outcome_window": "unverified",
+      "release_selection": "unverified",
+      "data_redistribution": "not established from repository software license",
+      "possible_use": "separate anonymized randomized-promotion targeting exercise; not current cycle/trend study",
+      "source_ids": [
+        "S04",
+        "S07",
+        "S08"
+      ],
+      "cluster_repetition_design": "not established"
+    }
+  ],
+  "restart_requirements": [
+    "RetailHero: obtain design-level allocation evidence and distinguish assigned treatment from actual delivery; clarify population/release selection, outcome window and campaign date, clustering/repetition, and permitted use.",
+    "Audit decision-time availability of customer and transaction fields; exclude or redefine any field whose pre-campaign status is unconfirmed.",
+    "If changing dataset or behavior hypothesis, explicitly revise scope before modeling; do not silently substitute store visits or anonymous proxy mechanisms."
+  ],
+  "important_limits": [
+    "Unverified randomization does not prove non-randomization.",
+    "The latest transaction timestamp is not an established campaign timestamp.",
+    "22,600 late first_redeem_date values among labeled customers flag uncertainty, not confirmed leakage.",
+    "Starbucks was not verified synthetic.",
+    "A blocked full mechanism study does not mean every dataset is unusable for every causal or statistical task."
+  ],
+  "historical_products": "372 pre-recorded original files verified unchanged; not a full raw-data or database hash audit",
+  "original_protocol": "protocols/stage_scope.json remains unchanged; this file is the final phase-one decision",
+  "completed_utc": "2026-10-15T08:46:33.807114+00:00"
+}

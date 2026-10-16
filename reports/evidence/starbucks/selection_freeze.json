@@ -1,0 +1,38 @@
+{
+  "choice": "shared_s005",
+  "selected_spec": {
+    "name": "shared_s005",
+    "family": "shared main-effects logistic + all low-dimensional treatment interactions",
+    "C": 1,
+    "interaction_scale": 0.05
+  },
+  "primary_quota": 0.1,
+  "created_utc": "2026-10-15T08:58:48.911496+00:00",
+  "test_labels_read": false,
+  "prediction_sha256": "e8162558c677fb1449372dfee03463a33aee1cc3dd021d644694cfac80ea8674",
+  "protocol_sha256": "bbf2a89842905d4f1f88b2c6addab27174792f4d2b39157a44db2371b1cbcb03",
+  "script_sha256": "9b30d365e8ed01cbab9385a64e0796ed005eeb8207043d152dc9f9ba1a224a00",
+  "n_train": 84534,
+  "n_test_features": 41650,
+  "full_fold_audit": [
+    {
+      "fold": 0,
+      "train_n": 56356,
+      "eval_n": 28178,
+      "customer_disjoint": true
+    },
+    {
+      "fold": 1,
+      "train_n": 56356,
+      "eval_n": 28178,
+      "customer_disjoint": true
+    },
+    {
+      "fold": 2,
+      "train_n": 56356,
+      "eval_n": 28178,
+      "customer_disjoint": true
+    }
+  ],
+  "wall_seconds": 13.854097000032198
+}

@@ -1,0 +1,164 @@
+{
+  "schema_version": 1,
+  "as_of": "2026-10-16",
+  "scope": "已找到并保留的协议、执行结果和修订索引；不是全部人类思考/未保存临时尝试的完备日志",
+  "project_wide_type1_control": false,
+  "project_disclosure": "项目是在多个数据与方法上持续探索后出现正结果；没有前瞻登记的跨项目序贯检验或统一alpha预算。单次冻结研究95%区间不能解释为整个搜索家族已控制5%误报率。",
+  "counts_warning": "不累加这些比较当独立试验；女装与男装共享对照，敏感性、重训、复核也非新的独立复制。",
+  "stop_rule": "不再在已查看的测试集上选模型、预算或种子追显著。继续确认需要新队列/政策实验；不事后改变校正集合包装成前瞻确认。",
+  "entries": [
+    {
+      "id": "hillstrom_initial",
+      "dataset": "Hillstrom",
+      "registered_at": "2026-10-14T18:00:49.988167+00:00",
+      "chronology": "protocol registration value; not inferred from filesystem modification time",
+      "protocol": {
+        "path": "reports/evidence/hillstrom/protocol.json",
+        "sha256": "4a9a8789e126aabbda6f387856eca2d09bd76b1dc61f4c7abc900a61855a60e2",
+        "scope": "source file bytes at 2026-10-16; not an external audit"
+      },
+      "result": {
+        "path": "reports/evidence/hillstrom/execution_summary.json",
+        "sha256": "15a21e533533855300a8ac2a73df3ac142862975a51c0823df8c475d030e5a9d",
+        "scope": "source file bytes at 2026-10-16; not an external audit"
+      },
+      "phase": "初始诊断与方法比较",
+      "interpretation": "历史主比较及旧测试；不计为新的独立确认",
+      "independent_replication": false,
+      "executed_comparisons": "exploratory"
+    },
+    {
+      "id": "hillstrom_mens_expanded",
+      "dataset": "Hillstrom",
+      "registered_at": "2026-10-14T18:26:46.421721+00:00",
+      "chronology": "protocol registration value; not inferred from filesystem modification time",
+      "protocol": {
+        "path": "reports/evidence/hillstrom/protocol_expansion_v2.json",
+        "sha256": "426e7a2e0c6908a6880cde7a946a4d6f41baf5da827eaaa30d58d385e54c4a6a",
+        "scope": "source file bytes at 2026-10-16; not an external audit"
+      },
+      "result": {
+        "path": "reports/evidence/hillstrom/mens_exploration_results.json",
+        "sha256": "892414e0088a96631038f295040cd5d1054e2c55b205d9d9043289f8eb7d7a53",
+        "scope": "source file bytes at 2026-10-16; not an external audit"
+      },
+      "phase": "男装扩展与购买参照",
+      "registered_uplift_specs": 21,
+      "executed_score_configs": 22,
+      "executed_comparisons": 110,
+      "positive_points": 31,
+      "positive_family_intervals": 0,
+      "independent_replication": false,
+      "interpretation": "开发选择；旧测试曾查看，整体探索性；21个登记增量规格加1个购买参照"
+    },
+    {
+      "id": "hillstrom_womens_expanded",
+      "dataset": "Hillstrom",
+      "registered_at": "2026-10-14T18:49:16.478336+00:00",
+      "chronology": "protocol registration value; not inferred from filesystem modification time",
+      "protocol": {
+        "path": "reports/evidence/hillstrom/womens_protocol_expansion_v2.json",
+        "sha256": "9884bb70a6650deb714b12cca882f6c8545d3b24aeff62f0715c7a089596cbe0",
+        "scope": "source file bytes at 2026-10-16; not an external audit"
+      },
+      "result": {
+        "path": "reports/evidence/hillstrom/womens_exploration_results.json",
+        "sha256": "f3b282415caacbbf864a8bbb5984aad8e18784ca48d385466c509c9ab32c0353",
+        "scope": "source file bytes at 2026-10-16; not an external audit"
+      },
+      "phase": "女装次要扩展",
+      "executed_score_configs": 22,
+      "executed_comparisons": 110,
+      "positive_points": 41,
+      "positive_family_intervals": 0,
+      "independent_replication": false,
+      "interpretation": "共享无邮件对照；在男装之后探索，不作为独立复制"
+    },
+    {
+      "id": "criteo",
+      "dataset": "Criteo",
+      "registered_at": "2026-10-15T00:04:32.681Z",
+      "chronology": "protocol registration value; not inferred from filesystem modification time",
+      "protocol": {
+        "path": "reports/evidence/criteo/protocol.json",
+        "sha256": "beb6ccb2bc0026273f8a0b85526a1be987670c39976e08c6c06e742fe8f77472",
+        "scope": "source file bytes at 2026-10-16; not an external audit"
+      },
+      "result": {
+        "path": "reports/evidence/criteo/test_results.json",
+        "sha256": "025e68cefe14d0b45019306185ae2f7ec4d2a8ca540a39c2034974befbbeecce",
+        "scope": "source file bytes at 2026-10-16; not an external audit"
+      },
+      "phase": "新发布基准与协议修订",
+      "original_uplift_specs": 6,
+      "executed_score_configs": 7,
+      "executed_comparisons": 35,
+      "independent_replication": false,
+      "interpretation": "选择在本轮留出开启前；未知发布抽样阻碍真实因果解释",
+      "amendments": [
+        {
+          "path": "reports/evidence/criteo/protocol_amendment_01.json",
+          "sha256": "cfe0c3b762329f557f8f4628f74ab34cb2ef921451d25c1c4dccd0201d999173",
+          "scope": "source file bytes at 2026-10-16; not an external audit"
+        },
+        {
+          "path": "reports/evidence/criteo/protocol_amendment_02.json",
+          "sha256": "ca2fa571bd5cc251dc396760db6844aa38cb59b12dfc3bd6280b0eb634073be9",
+          "scope": "source file bytes at 2026-10-16; not an external audit"
+        }
+      ]
+    },
+    {
+      "id": "data_qualification",
+      "dataset": "RetailHero / Lenta / Starbucks",
+      "registered_at": null,
+      "chronology": "protocol registration value; not inferred from filesystem modification time",
+      "protocol": {
+        "sha256": "ad7010d4bac5ea495720411b049aad0bde23d823070b2ec120f6357939b623d4",
+        "availability": "内部阶段范围文件保留本地，不公开；此处只披露文件身份哈希。"
+      },
+      "result": {
+        "path": "reports/evidence/retailhero/qualification_decision.json",
+        "sha256": "aec0c1dcca07446d4bd1f0712d1ab279222b40723d5c0bd27122ff40a97af3f1",
+        "scope": "source file bytes at 2026-10-16; not an external audit"
+      },
+      "phase": "机制路线数据资格审查",
+      "executed_score_configs": 0,
+      "executed_comparisons": 0,
+      "independent_replication": false,
+      "interpretation": "无合格机制数据，未训练；其后显式补充匿名促销实证范围"
+    },
+    {
+      "id": "starbucks",
+      "dataset": "Starbucks",
+      "registered_at": "2026-10-15",
+      "chronology": "protocol registration value; not inferred from filesystem modification time",
+      "protocol": {
+        "path": "reports/evidence/starbucks/protocol_v1.json",
+        "sha256": "bbf2a89842905d4f1f88b2c6addab27174792f4d2b39157a44db2371b1cbcb03",
+        "scope": "source file bytes at 2026-10-16; not an external audit"
+      },
+      "result": {
+        "path": "reports/evidence/starbucks/holdout_first_result.json",
+        "sha256": "00e620e5e96e0d16d7c243589ac9fbcc9cd836bb011f6f5fee98535b964e6458",
+        "scope": "source file bytes at 2026-10-16; not an external audit"
+      },
+      "phase": "匿名随机促销：冻结策略正式留出",
+      "executed_score_configs": 7,
+      "registered_incremental_specs": 6,
+      "executed_comparisons": 1,
+      "independent_replication": false,
+      "interpretation": "一个冻结主要策略对随机；两个次要参照差值和两档敏感性不混作一个独立试验",
+      "freeze": {
+        "path": "reports/evidence/starbucks/selection_freeze.json",
+        "sha256": "599fa2cb5091b650e1a951d0d24b52c0af77bf49befd7efa50faafe177737145",
+        "scope": "source file bytes at 2026-10-16; not an external audit"
+      },
+      "open_receipt": {
+        "path": "reports/evidence/starbucks/holdout_open_receipt.json",
+        "sha256": "c9d8812b12737cc5a017055617b0a8dd9e8dd6d75e66c6be8bfd5bd34dd31d22",
+        "scope": "source file bytes at 2026-10-16; not an external audit"
+      }
+    }
+  ]
+}

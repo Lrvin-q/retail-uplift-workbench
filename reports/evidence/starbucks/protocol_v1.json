@@ -1,0 +1,119 @@
+{
+  "version": "1.0-before-training-label-inspection",
+  "created": "2026-10-15",
+  "objective": "purchase gain against same-budget random targeting",
+  "amendment": "Following explicit user instruction to continue effect improvement, extend previous stage with the already-reviewed anonymous randomized-promotion dataset. Purchase objective retained; behavioral cycle/trend hypotheses remain untested. No third alternative dataset added.",
+  "data": "Official Udacity Starbucks promotion exercise",
+  "source_training_blob": "5cb8bb8c991adacba83047a79962ab186a474494",
+  "source_test_blob": "a728a58fe279ed1b6466f54ae5234e545076bee2",
+  "design": {
+    "randomization": "supported by official exercise; balanced allocation e=0.5 assumed, not inferred as fact from observed sample share",
+    "pre_treatment": "HBS working paper Appendix F supports V1-V7 pretreatment status; actual semantics unavailable",
+    "release_selection": "not independently audited at enterprise level; analysis conditional on official exercise RCT interpretation and released cohort",
+    "outcome_window": "exercise purchase outcome; exact calendar duration unavailable",
+    "interpretation": "released randomized exercise cohort; no company realized ROI or deployment claim"
+  },
+  "data_exposure": "Previously read official descriptions and external paper aggregate sample rates; never accessed this project's raw Starbucks train/test data before this protocol. Search snippets exposed other published project summary performance, not thresholds or label-level data.",
+  "features": {
+    "categorical": [
+      "V1",
+      "V4",
+      "V5",
+      "V6",
+      "V7"
+    ],
+    "continuous": [
+      "V2",
+      "V3"
+    ],
+    "exclude": [
+      "ID",
+      "Promotion",
+      "purchase"
+    ],
+    "spline_knots": 4,
+    "spline_degree": 2
+  },
+  "split": {
+    "holdout": "Preserve official Test.csv entirely, do not open labels until selection freeze. Only ID for disjointness before final evaluation.",
+    "development": "Official training.csv; split 75/25 fitting/validation stratified by T x Y",
+    "seed": 20261015,
+    "reason": "preserve original external holdout rather than mix train/test to force arbitrary 50/20/30"
+  },
+  "budgets": {
+    "primary": 0.1,
+    "sensitivity": [
+      0.05,
+      0.2
+    ],
+    "rounding": "floor(q*N+0.5)",
+    "ties": "SHA256 namespace+ID, ascending; excluded from model features"
+  },
+  "nuisance": {
+    "type": "arm-specific HGB probabilities",
+    "max_iter": 150,
+    "max_leaf_nodes": 7,
+    "max_depth": 3,
+    "min_samples_leaf": 250,
+    "l2_regularization": 10,
+    "learning_rate": 0.05,
+    "early_stopping": false,
+    "folds": 3
+  },
+  "references": {
+    "random": "expected same-budget allocation",
+    "purchase": "single fixed HGB trained on treated customers to predict promoted purchase propensity; same HGB limits as nuisance",
+    "simple": "single split direct budget-value tree; no claimed RFM or field semantics"
+  },
+  "candidates": [
+    {
+      "name": "shared_s005",
+      "family": "shared main-effects logistic + all low-dimensional treatment interactions",
+      "C": 1,
+      "interaction_scale": 0.05
+    },
+    {
+      "name": "shared_s02",
+      "family": "shared main-effects logistic + all low-dimensional treatment interactions",
+      "C": 1,
+      "interaction_scale": 0.2
+    },
+    {
+      "name": "shared_s1",
+      "family": "shared main-effects logistic + all low-dimensional treatment interactions",
+      "C": 1,
+      "interaction_scale": 1
+    },
+    {
+      "name": "policy_depth1",
+      "family": "greedy shallow direct quota-value partition",
+      "max_depth": 1,
+      "min_leaf_fraction": 0.05
+    },
+    {
+      "name": "policy_depth2",
+      "family": "greedy shallow direct quota-value partition",
+      "max_depth": 2,
+      "min_leaf_fraction": 0.05
+    },
+    {
+      "name": "policy_depth3",
+      "family": "greedy shallow direct quota-value partition",
+      "max_depth": 3,
+      "min_leaf_fraction": 0.05
+    }
+  ],
+  "policy_tree": "For each candidate partition optimize exact quota over leaf means of cross-fitted DR scores; choose split by quota utility, not squared-error loss; rank leaves, ID-hash boundary ties. Greedy local partition search, not global optimal policytree library.",
+  "selection": {
+    "criterion": "highest independent validation paired AIPW gain vs random at 10%; choose among 6 candidates and fixed purchase reference; numeric ties within 1e-10 prefer simpler depth1 then purchase then fewer interactions",
+    "null": "if no validation gain>0 select randomized policy and report no approved personalization",
+    "after_selection": "refit frozen winning spec and references on all official training, freeze predictions/hash before reading Test outcomes",
+    "revisions_max": 1
+  },
+  "primary_inference": "paired exact-quota reranking nonparametric bootstrap, 2000 draws seed20261016; primary selected strategy-vs-random 95% percentile interval; direct Hajek and HT as robustness checks",
+  "secondary_inference": "selected-vs-simple and selected-vs-purchase on same observations, Holm p and Bonferroni 97.5% intervals for these 2 contrasts; 5/20% budgets sensitivity, not replacement",
+  "sensitivity": "e=0.45,0.50,0.55 and data-adaptive treatment fraction robust check, unadjusted sensitivity labels; no external causal guarantee under outcome-dependent unknown release",
+  "diagnostics": "development arm events, prespecified univariate categorical effects and continuous quintiles, out-of-sample loss/calibration, feature importance descriptive, train perturbation stability later; no test-guided redesign",
+  "artifacts": "new isolated report directory, all first results retained, no public data re-upload, no production changes",
+  "limits": "A positive CI supports released exercise under assumptions. Not proof of cycle/trend mechanism or Starbucks real profit. No guarantee specialized uplift beats ordinary purchase prediction."
+}

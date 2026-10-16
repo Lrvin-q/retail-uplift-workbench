@@ -64,7 +64,7 @@ def test_demo_sql_python_counts_and_holdout_are_consistent_and_reproducible():
 def test_cli_runs_with_no_private_environment_database_or_api(tmp_path):
     import os
     env={k:v for k,v in os.environ.items() if not any(x in k.upper() for x in ("DATABASE_URL","DEEPSEEK","PYTHONPATH","DSA_"))}
-    env.update(DSA_ENV_FILE=str(tmp_path/"absent.env"),DSA_WORKSPACE_ROOT=str(tmp_path),PYTHONDONTWRITEBYTECODE="1")
+    env.update(DSA_ENV_FILE=str(tmp_path/"absent.env"),DSA_WORKSPACE_ROOT=str(tmp_path),PYTHONDONTWRITEBYTECODE="1",PYTHONUTF8="1",PYTHONIOENCODING="utf-8")
     out=tmp_path/"demo"
     p=subprocess.run([sys.executable,"-m","dsa.portfolio_demo","--out",str(out)],cwd=tmp_path,env=env,capture_output=True,text=True,encoding="utf-8",timeout=90)
     assert p.returncode==0,p.stderr

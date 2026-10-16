@@ -1,0 +1,17 @@
+{
+  "version": "criteo-v2.1-amendment01",
+  "registered_at": "2026-10-15T00:06:42.142Z",
+  "stage": "Before training, validation scoring and any test outcome summary",
+  "change": "Add pooled-purchase HGB31 baseline to all development selection and held-out evaluation; retain original six uplift candidates and fractions",
+  "reason": "Continue first-review requirement to directly compare ordinary purchase targeting; no data outcome motivated amendment",
+  "candidate": {
+    "name": "purchase_hgb31",
+    "kind": "purchase",
+    "leaves": 31
+  },
+  "n_candidates": 7,
+  "n_comparisons": 35,
+  "selection": "Highest validation AIPW gain at nominal10% among ALL seven, plus separately identify highest among six uplift candidates. Ordinary purchase baseline fully eligible, no uplift superiority assumed",
+  "multiplicity": "Bonferroni two-sided normal intervals across all seven x five fixed threshold rules; 35 contrasts vs same-realized-budget random",
+  "inference": "Unchanged frozen-threshold IID covariance IF from original protocol"
+}

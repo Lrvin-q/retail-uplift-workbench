@@ -1,0 +1,157 @@
+{
+  "protocol_version": "womens-exploration-1",
+  "frozen_at": "2026-10-14T18:49:16.478336+00:00",
+  "trigger": "User explicitly requested broader search for positive purchase uplift versus same-budget random targeting",
+  "scope": "Post-mens exploratory secondary analysis, same experiment/shared controls, not independent validation",
+  "candidates": [
+    {
+      "name": "t_lr",
+      "kind": "t_lr"
+    },
+    {
+      "name": "t_hgb_leaf100",
+      "kind": "t_hgb",
+      "min_samples_leaf": 100,
+      "l2_regularization": 10
+    },
+    {
+      "name": "t_hgb_leaf200",
+      "kind": "t_hgb",
+      "min_samples_leaf": 200,
+      "l2_regularization": 10
+    },
+    {
+      "name": "t_hgb_leaf500",
+      "kind": "t_hgb",
+      "min_samples_leaf": 500,
+      "l2_regularization": 30
+    },
+    {
+      "name": "t_rf_leaf100",
+      "kind": "t_rf",
+      "min_samples_leaf": 100
+    },
+    {
+      "name": "t_rf_leaf500",
+      "kind": "t_rf",
+      "min_samples_leaf": 500
+    },
+    {
+      "name": "s_lr_shared",
+      "kind": "s_lr",
+      "interaction_scale": 0
+    },
+    {
+      "name": "s_lr_shrink01",
+      "kind": "s_lr",
+      "interaction_scale": 0.1
+    },
+    {
+      "name": "s_lr_shrink05",
+      "kind": "s_lr",
+      "interaction_scale": 0.5
+    },
+    {
+      "name": "s_lr_interact",
+      "kind": "s_lr",
+      "interaction_scale": 1
+    },
+    {
+      "name": "s_hgb",
+      "kind": "s_hgb",
+      "min_samples_leaf": 200
+    },
+    {
+      "name": "x_hgb_leaf200",
+      "kind": "x_hgb",
+      "min_samples_leaf": 200
+    },
+    {
+      "name": "x_hgb_leaf500",
+      "kind": "x_hgb",
+      "min_samples_leaf": 500
+    },
+    {
+      "name": "dr_ridge1",
+      "kind": "dr_ridge",
+      "alpha": 1
+    },
+    {
+      "name": "dr_ridge100",
+      "kind": "dr_ridge",
+      "alpha": 100
+    },
+    {
+      "name": "dr_ridge1000",
+      "kind": "dr_ridge",
+      "alpha": 1000
+    },
+    {
+      "name": "dr_hgb_leaf500",
+      "kind": "dr_hgb",
+      "min_samples_leaf": 500,
+      "l2_regularization": 30
+    },
+    {
+      "name": "dr_hgb_leaf1000",
+      "kind": "dr_hgb",
+      "min_samples_leaf": 1000,
+      "l2_regularization": 100
+    },
+    {
+      "name": "dr_forest",
+      "kind": "dr_rf",
+      "min_samples_leaf": 500
+    },
+    {
+      "name": "dr_stump",
+      "kind": "dr_tree",
+      "max_depth": 1,
+      "min_samples_leaf": 1000
+    },
+    {
+      "name": "dr_tree2",
+      "kind": "dr_tree",
+      "max_depth": 2,
+      "min_samples_leaf": 1000
+    }
+  ],
+  "outcome": "conversion",
+  "primary_reference": "expected random budget q_n * AIPW ATE",
+  "fractions": [
+    0.05,
+    0.1,
+    0.2,
+    0.3,
+    0.5
+  ],
+  "seed": 20261019,
+  "outer_cv_folds": 5,
+  "inner_dr_folds": 3,
+  "development": "60/20 splits pooled, five folds stratified by T and Y",
+  "historical_test": "Fixed 20% womens/control; no claim untouched dataset",
+  "selection": "maximize development OOF AIPW gain over expected-random across candidate and fraction; fold-specific exact budget; tie by candidate name then smaller fraction; additionally show fixed 10% result; no selection based on historical test",
+  "selection_limitation": "Same experiment chosen after mens failure. All 110 contrasts disclosed, no global confirmation across analyses",
+  "shortlist": 3,
+  "test_bootstrap_repeats": 2000,
+  "test_bootstrap_seed": 20261020,
+  "multiplicity": "report pointwise plus bootstrap max-standardized-deviation intervals across ALL registered candidate x fraction contrasts; conditional exploratory intervals, not cure for historical reuse",
+  "max_forest_trees": 200,
+  "n_jobs": 2,
+  "no_new_features": true,
+  "no_new_data": true,
+  "no_api": true,
+  "no_database_writes": true,
+  "benchmark_extension": {
+    "name": "purchase_probability",
+    "kind": "pooled LR purchase prediction",
+    "eligible_in_development_selection": true,
+    "reason": "Round-1 reviewer explicitly requested direct comparison with ordinary purchase ranking; added before observing expanded historical-test results",
+    "registered_at": "2026-10-14T18:31:33.319316+00:00",
+    "n_families_total": 22,
+    "n_comparisons_total": 110
+  },
+  "treatment": "Womens E-Mail",
+  "control": "No E-Mail",
+  "split_seed": 20261011
+}

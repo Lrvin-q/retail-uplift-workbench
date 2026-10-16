@@ -1,0 +1,9 @@
+{
+  "status": "completed",
+  "wall_seconds": 72.29961200000253,
+  "api_calls": 0,
+  "original_database_writes": 0,
+  "new_product_models": 0,
+  "all_new_model_comparisons": "exploratory",
+  "finished_at": "2026-10-14T18:06:36.884094+00:00"
+}

@@ -14,6 +14,9 @@ jobs:
       - uses: actions/setup-python@v5
         with:
           python-version: ${{ matrix.python }}
-      - run: python -m pip install ".[dev]"
+      - run: python -m pip install ".[dev,ui]"
       - run: python -m pytest
       - run: python -m dsa.portfolio_demo --out artifacts/ci-demo
+
+      - name: Frozen research scenario (no external service)
+        run: python -m dsa.research_portal --study starbucks --json

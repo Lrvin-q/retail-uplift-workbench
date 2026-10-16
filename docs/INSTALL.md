@@ -30,6 +30,14 @@ macOS / Linux：
 
 演示不调用 `get_settings()`、不加载数据库、不调用模型。不要为了运行它而复制真实 `.env`。输出目录已存在时会报错，请改用 `--out artifacts/demo-2`；不会覆盖历史记录。
 
+## 冻结研究与成本情景
+
+基础安装即可在任意目录运行 `python -m dsa.research_portal --study starbucks --json`，或用 `--ledger` 查看探索账本。无需下载原始数据或配置 API；输出为保存好的证据及假设经济条件。
+
+只看研究页面可安装 `python -m pip install ".[ui]"`，运行 `python -m streamlit run src/dsa/agent/workbench.py`，侧栏选择“研究证据与业务决策”。这个工作区不初始化数据库或模型；切回实验分析则需要完整服务。`[ui]` 只保证研究页面，不承诺完整产品依赖齐全。
+
+可执行 `python -m pip install ".[dev,ui]"` 后运行包含 AppTest 的全部公开测试。仅基础 `[dev]` 且未安装 Streamlit 时，2 项 UI 测试会明确跳过；CI 安装 `[dev,ui]`，不以跳过代替 UI 验证。
+
 ## 完整产品（可选）
 
 完整代码位于 `src/dsa`，轻量依赖只保证离线演示及公开测试所需路径。完整产品使用 PostgreSQL、FastAPI、Streamlit 与可选 DeepSeek；安装附加依赖：

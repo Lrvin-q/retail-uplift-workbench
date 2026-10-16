@@ -4,7 +4,7 @@ build-backend = "setuptools.build_meta"
 
 [project]
 name = "retail-uplift-workbench"
-version = "0.1.0"
+version = "0.2.0"
 description = "Auditable marketing experiment analysis and uplift policy evaluation portfolio"
 readme = "README.md"
 requires-python = ">=3.12"
@@ -41,6 +41,7 @@ full = [
     "sqlglot>=25,<31",
 ]
 dev = ["pytest>=8,<10"]
+ui = ["streamlit>=1.40,<2"]
 
 [project.scripts]
 dsa-demo = "dsa.portfolio_demo:main"
@@ -49,7 +50,7 @@ dsa-demo = "dsa.portfolio_demo:main"
 where = ["src"]
 
 [tool.setuptools.package-data]
-"dsa.resources" = ["*.yaml", "sql/*.sql"]
+"dsa.resources" = ["*.yaml", "*.json", "sql/*.sql"]
 
 [tool.pytest.ini_options]
 testpaths = ["tests"]
